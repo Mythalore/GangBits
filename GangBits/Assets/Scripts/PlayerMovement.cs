@@ -38,14 +38,54 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         //gain move direction from x axis
-        moveDirection.x = (Input.GetAxis("Horizontal"));
-        //create impulse force and clamp magnitude to somethign reasonable
-        impulse_force = Vector2.ClampMagnitude((speed * moveDirection * rig.mass), max_force);
+        if(gameObject.tag == "Player1")
+        {
+            moveDirection.x = (Input.GetAxis("Horizontal1"));
+            //create impulse force and clamp magnitude to somethign reasonable
+            impulse_force = Vector2.ClampMagnitude((speed * moveDirection * rig.mass), max_force);
+        }
+        else if(gameObject.tag == "Player2")
+        {
+            moveDirection.x = (Input.GetAxis("Horizontal2"));
+            //create impulse force and clamp magnitude to somethign reasonable
+            impulse_force = Vector2.ClampMagnitude((speed * moveDirection * rig.mass), max_force);
+        }
+        else if(gameObject.tag == "Player3")
+        {
+            moveDirection.x = (Input.GetAxis("Horizontal3"));
+
+            impulse_force = Vector2.ClampMagnitude((speed * moveDirection * rig.mass), max_force);
+        }
+        else if(gameObject.tag == "Player4")
+        {
+            moveDirection.x = (Input.GetAxis("Horizontal4"));
+
+            impulse_force = Vector2.ClampMagnitude((speed * moveDirection * rig.mass), max_force);
+        }
+        
 
         if (isGrounded())
         {
-            if(Input.GetButton("Jump"))
-            {              
+            if(this.gameObject.tag == "Player1")
+            {
+                if(Input.GetButton("Jump"))
+                {
+                    moveDirection.y = JumpValue();
+                }
+            }
+            else if (this.gameObject.tag == "Player2")
+            {
+                if (Input.GetButton("P2 Jump"))
+                {
+                    moveDirection.y = JumpValue();
+                }
+            }
+            else if(this.gameObject.tag == "Player3")
+            {
+                moveDirection.y = JumpValue();
+            }
+            else if(this.gameObject.tag == "Player4")
+            {
                 moveDirection.y = JumpValue();
             }
             //add force as impulse to the rigidbody

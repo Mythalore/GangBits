@@ -23,10 +23,10 @@ GameObject:
   - component: {fileID: 65753818522113154}
   - component: {fileID: 23630762125236528}
   - component: {fileID: 54065600681057048}
-  - component: {fileID: 114954304397621612}
+  - component: {fileID: 114836746359231210}
   m_Layer: 0
-  m_Name: Player
-  m_TagString: Player1
+  m_Name: Player4
+  m_TagString: Player4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,7 +209,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b179be5d239cc1244a8383f9252913a3, type: 2}
+  - {fileID: 2100000, guid: 710fda828cbff0c47967c2fad148954d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -281,19 +281,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114883786271467524
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1400011516011192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbec81eddcc0668499c84ba15fdbe5c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  secondpoint: {fileID: 4162397344655964}
---- !u!114 &114954304397621612
+--- !u!114 &114836746359231210
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -309,3 +297,15 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0}
   jump_height: 1
   gravity: 50
+--- !u!114 &114883786271467524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1400011516011192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbec81eddcc0668499c84ba15fdbe5c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondpoint: {fileID: 4162397344655964}
