@@ -5,22 +5,23 @@ using UnityEngine;
 public class Direction : MonoBehaviour {
 
     public bool FacingLeft;
+    private SideArms sideArm;
 	// Use this for initialization
 	void Start () {
-		
+        sideArm = GetComponent<SideArms>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) && FacingLeft != true)
         {
             FacingLeft = true;
-            print(FacingLeft);
+            sideArm.ArmDirection();
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) && FacingLeft != false)
         {
             FacingLeft = false;
-            print(FacingLeft);
+            sideArm.ArmDirection();
         }
         
 	}
