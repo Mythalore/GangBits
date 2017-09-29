@@ -21,35 +21,35 @@ public class Punch : MonoBehaviour {
             //transform.Translate(0, 0, z);
 
 
-        if (Input.GetButton("e")) //Rotation Clockwise
-        {
-            transform.RotateAround(transform.parent.position, Vector3.back, 180 * Time.deltaTime);
-        }
+        //if (Input.GetButton("e")) //Rotation Clockwise
+        //{
+        //    transform.RotateAround(transform.parent.position, Vector3.back, 180 * Time.deltaTime);
+        //}
 
-        if (Input.GetButton("q")) //Rotation Counterclockwise
-        {
-            transform.RotateAround(transform.parent.position, Vector3.back, -180 * Time.deltaTime);
-        }
-        var punchX = Time.deltaTime * 3.0f;
-        if (Input.GetButton("w")) //Punch
-        {
-           // if (punch == false)
-           // {
-                //print("false");
+        //if (Input.GetButton("q")) //Rotation Counterclockwise
+        //{
+        //    transform.RotateAround(transform.parent.position, Vector3.back, -180 * Time.deltaTime);
+        //}
+        //var punchX = Time.deltaTime * 3.0f;
+        //if (Input.GetButton("w")) //Punch
+        //{
+        //   // if (punch == false)
+        //   // {
+        //        //print("false");
                
-                position1.x = Mathf.Lerp(transform.position.x, secondpoint.position.x, Time.deltaTime * 3.0f);
+        //        position1.x = Mathf.Lerp(transform.position.x, secondpoint.position.x, Time.deltaTime * 3.0f);
 
-                transform.position = position1;
-               // punch = true;
-          //  }
-            //else if (punch == true)
-           // {
-               // print("true");
+        //        transform.position = position1;
+        //       // punch = true;
+        //  //  }
+        //    //else if (punch == true)
+        //   // {
+        //       // print("true");
                 
-                position1.x = Mathf.Lerp(secondpoint.position.x, transform.parent.position.x, Time.deltaTime * 3.0f);
+        //        position1.x = Mathf.Lerp(secondpoint.position.x, transform.parent.position.x, Time.deltaTime * 3.0f);
 
-                transform.position = position1;
-              //  punch = false;
+        //        transform.position = position1;
+        //      //  punch = false;
  
                 
            // }
@@ -57,4 +57,4 @@ public class Punch : MonoBehaviour {
 
         }
     }
-}
+//}
