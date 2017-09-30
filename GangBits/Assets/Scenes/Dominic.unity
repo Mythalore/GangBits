@@ -164,7 +164,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &60975461
 Transform:
   m_ObjectHideFlags: 0
@@ -172,7 +171,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 60975459}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.35, y: 0.16, z: 0.13}
+  m_LocalPosition: {x: 0.387, y: 0.22, z: 0.13}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 945559495}
@@ -260,7 +259,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &492061038
 Transform:
   m_ObjectHideFlags: 0
@@ -330,7 +328,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &621246773
 Transform:
   m_ObjectHideFlags: 0
@@ -338,7 +335,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 621246771}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.35, y: 0.16, z: -0.14}
+  m_LocalPosition: {x: 0.387, y: 0.22, z: -0.14}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 945559495}
@@ -462,7 +459,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &945559495
 Transform:
   m_ObjectHideFlags: 0
@@ -489,6 +485,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbec81eddcc0668499c84ba15fdbe5c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rightHand: {fileID: 60975459}
+  leftHand: {fileID: 621246771}
 --- !u!114 &945559497
 MonoBehaviour:
   m_ObjectHideFlags: 0
