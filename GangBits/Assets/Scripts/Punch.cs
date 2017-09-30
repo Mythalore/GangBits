@@ -3,58 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Punch : MonoBehaviour {
+    public GameObject rightHand;
+    public GameObject leftHand;
     // Use this for initialization
-    public Transform secondpoint;
-    //private bool punch = false;
-    private Vector3 position1;
-	void Start () {
+    void Start () {
     }
     
     // Update is called once per frame
     void Update () {
-            position1 = transform.position;
-
-            var x = Time.deltaTime * 150.0f;
-           // var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
-
-            
-            //transform.Translate(0, 0, z);
-
-
-        if (Input.GetButton("e")) //Rotation Clockwise
+        if (Input.GetMouseButton(0))
         {
-            transform.RotateAround(transform.parent.position, Vector3.back, 180 * Time.deltaTime);
+                rightHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 3.0f, 0.8f), rightHand.transform.localPosition.y, rightHand.transform.localPosition.z);
+                leftHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 2.5f, 0.8f), leftHand.transform.localPosition.y, leftHand.transform.localPosition.z);
         }
-
-        if (Input.GetButton("q")) //Rotation Counterclockwise
+        else
         {
-            transform.RotateAround(transform.parent.position, Vector3.back, -180 * Time.deltaTime);
-        }
-        var punchX = Time.deltaTime * 3.0f;
-        if (Input.GetButton("w")) //Punch
-        {
-           // if (punch == false)
-           // {
-                //print("false");
-               
-                position1.x = Mathf.Lerp(transform.position.x, secondpoint.position.x, Time.deltaTime * 3.0f);
-
-                transform.position = position1;
-               // punch = true;
-          //  }
-            //else if (punch == true)
-           // {
-               // print("true");
-                
-                position1.x = Mathf.Lerp(secondpoint.position.x, transform.parent.position.x, Time.deltaTime * 3.0f);
-
-                transform.position = position1;
-              //  punch = false;
- 
-                
-           // }
-
-
+            //Have Position Reset that considers position
         }
     }
 }
