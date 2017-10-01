@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Punch.cs" />
     <Compile Include="Assets\Scripts\SideArms.cs" />
+    <Compile Include="Assets\Scripts\WallRepel.cs" />
     <Compile Include="Assets\Truck_Trucks.cs" />
     <Compile Include="Assets\Truck_WheelRotation.cs" />
   </ItemGroup>
