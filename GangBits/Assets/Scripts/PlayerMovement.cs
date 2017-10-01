@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody rig;
+    private Rigidbody2D rig;
 
-    public float speed = 5f;
+    public float speed = 1.0f;
     public float max_force = 20f;
     public Vector2 moveDirection = Vector2.zero;
     public float jump_height = 1.0f;
     public float gravity = 50.0f;
+    public float jump_force = 50.0f;
 
-    private Vector2 impulse_force = Vector2.zero;
-    private float dist_to_ground = 1.0f;
+    public Vector2 impulse_force = Vector2.zero;
 
+    private bool grounded = false;
 
     /*.................................................
       IMPULSE BASED X,Y MOVEMENT
@@ -26,97 +27,152 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         //Initialisations
-        rig = GetComponent<Rigidbody>();
+        rig = GetComponent<Rigidbody2D>();
         rig.mass = 5.0f;
         rig.drag = 5.0f;
         rig.freezeRotation = true;
-        rig.useGravity = false;
+        rig.gravityScale = 0.0f;
     }
 
 
     //Update is called once per frame
     void FixedUpdate()
     {
-        //gain move direction from x axis
-        if(gameObject.tag == "Player1")
+        if (this.gameObject.tag == "Player1")
         {
+
             moveDirection.x = (Input.GetAxis("Horizontal1"));
-            //create impulse force and clamp magnitude to somethign reasonable
             impulse_force = Vector2.ClampMagnitude((speed * moveDirection * rig.mass), max_force);
-        }
-        else if(gameObject.tag == "Player2")
-        {
-            moveDirection.x = (Input.GetAxis("Horizontal2"));
-            //create impulse force and clamp magnitude to somethign reasonable
-            impulse_force = Vector2.ClampMagnitude((speed * moveDirection * rig.mass), max_force);
-        }
-        else if(gameObject.tag == "Player3")
-        {
-            moveDirection.x = (Input.GetAxis("Horizontal3"));
 
-            impulse_force = Vector2.ClampMagnitude((speed * moveDirection * rig.mass), max_force);
-        }
-        else if(gameObject.tag == "Player4")
-        {
-            moveDirection.x = (Input.GetAxis("Horizontal4"));
-
-            impulse_force = Vector2.ClampMagnitude((speed * moveDirection * rig.mass), max_force);
-        }
-        
-
-        if (isGrounded())
-        {
-            if(this.gameObject.tag == "Player1")
+            if (grounded)
             {
-                if(Input.GetButton("Jump"))
+                if(Input.GetButton("P1 Jump")  )
                 {
-                    moveDirection.y = JumpValue();
+                    //Debug.Log("P1 Jump");
+                    rig.AddForce(new Vector2(0, jump_force * rig.mass));
                 }
+                
             }
-            else if (this.gameObject.tag == "Player2")
+            else
+            {
+                moveDirection.y = 0;
+                rig.AddForce(new Vector2(0, -gravity * rig.mass));
+                //Debug.Log("going down");
+            }
+
+            rig.AddForce(impulse_force, ForceMode2D.Impulse);
+            moveDirection = Vector2.zero;
+        }
+        //PLAYER 2
+        else if (this.gameObject.tag == "Player2")
+        {
+
+            moveDirection.x = (Input.GetAxis("Horizontal2"));
+            impulse_force = Vector2.ClampMagnitude((speed * moveDirection * rig.mass), max_force);
+
+            if (grounded)
             {
                 if (Input.GetButton("P2 Jump"))
                 {
-                    moveDirection.y = JumpValue();
+                    //Debug.Log("P1 Jump");
+                    rig.AddForce(new Vector2(0, jump_force * rig.mass));
                 }
+
             }
-            else if(this.gameObject.tag == "Player3")
+            else
             {
-                moveDirection.y = JumpValue();
+                moveDirection.y = 0;
+                rig.AddForce(new Vector2(0, -gravity * rig.mass));
+                //Debug.Log("going down");
             }
-            else if(this.gameObject.tag == "Player4")
+
+            rig.AddForce(impulse_force, ForceMode2D.Impulse);
+            moveDirection = Vector2.zero;
+        }
+        //PLAYER 3
+        else if (this.gameObject.tag == "Player3")
+        {
+
+            moveDirection.x = (Input.GetAxis("Horizontal3"));
+            impulse_force = Vector2.ClampMagnitude((speed * moveDirection * rig.mass), max_force);
+
+            if (grounded)
             {
-                moveDirection.y = JumpValue();
+                if (Input.GetButton("P3 Jump"))
+                {
+                    //Debug.Log("P1 Jump");
+                    rig.AddForce(new Vector2(0, jump_force * rig.mass));
+                }
+
             }
-            //add force as impulse to the rigidbody
-        }
-        else
-        {
-            //reset y movement so we don't continuously jump
-            moveDirection.y = 0;
-        }
+            else
+            {
+                moveDirection.y = 0;
+                rig.AddForce(new Vector2(0, -gravity * rig.mass));
+                //Debug.Log("going down");
+            }
 
-        rig.AddForce(impulse_force, ForceMode.Impulse);
-        rig.AddForce(new Vector2(0, -gravity * rig.mass));
+            rig.AddForce(impulse_force, ForceMode2D.Impulse);
+            moveDirection = Vector2.zero;
+        }
+        //PLAYER 4
+        else if (this.gameObject.tag == "Player4")
+        {
+
+            moveDirection.x = (Input.GetAxis("Horizontal4"));
+            impulse_force = Vector2.ClampMagnitude((speed * moveDirection * rig.mass), max_force);
+
+            if (grounded)
+            {
+                if (Input.GetButton("P4 Jump"))
+                {
+                    //Debug.Log("P1 Jump");
+                    rig.AddForce(new Vector2(0, jump_force * rig.mass));
+                }
+
+            }
+            else
+            {
+                moveDirection.y = 0;
+                rig.AddForce(new Vector2(0, -gravity * rig.mass));
+                //Debug.Log("going down");
+            }
+
+            rig.AddForce(impulse_force, ForceMode2D.Impulse);
+            moveDirection = Vector2.zero;
+        }
+        //add force as impulse to the rigidbody
+        // rig.AddForce(impulse_force, ForceMode2D.Impulse);
     }
 
 
-    float JumpValue()
+
+    void OnCollisionEnter2D(Collision2D col)
     {
-        if(isGrounded())
+        if (col.gameObject.tag == "Ground")
         {
-            return Mathf.Sqrt(2 * jump_height * gravity);
+            Debug.Log("Entered");
+
+            grounded = true;
         }
-        else
-        {
-            return 0;
-        }
+
     }
 
 
-    public bool isGrounded()
+    void OnCollisionExit2D(Collision2D col)
     {
-        return Physics.Raycast(rig.transform.position, -Vector2.up, dist_to_ground);
+        if (col.gameObject.tag == "Ground")
+        {
+            Debug.Log("Departed");
+
+            grounded = false;
+        }
     }
+
+    //Not working, but could be?
+    //public bool isGrounded()
+    //{
+    //    return Physics.Raycast(rig.transform.position, -Vector2.up, dist_to_ground);
+    //}
 
 }
