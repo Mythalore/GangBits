@@ -8,19 +8,21 @@ public class Direction : MonoBehaviour {
     private SideArms sideArm;
 	// Use this for initialization
 	void Start () {
-        sideArm = GetComponent<SideArms>();
+        sideArm = GetComponent<SideArms>(); //gets the side the arms should be on
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.A) && FacingLeft != true)
+        float movement = (Input.GetAxis("Horizontal1")); //needs to be changed for multiple players
+        if (movement < 0 && FacingLeft != true) //If movement is going right and wasn't moving right before
         {
-            FacingLeft = true;
+            FacingLeft = true; //Changes the state and calls the function to swap the sides
             sideArm.ArmDirection();
+
         }
-        else if (Input.GetKey(KeyCode.D) && FacingLeft != false)
+        else if (movement > 0 && FacingLeft != false) //Moving left and wasn't moving left before
         {
-            FacingLeft = false;
+            FacingLeft = false; //Changes the state and calls the function to swap the sides
             sideArm.ArmDirection();
         }
         
