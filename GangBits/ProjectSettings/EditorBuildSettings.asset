@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tim.unity
     guid: f23851fe6cb7e724ea8a6e71b0a18a53
+  - enabled: 0
+    path: Assets/Scenes/Sam.unity
+    guid: 6f267fe8f53533f45a8f80b6e75f3dbd

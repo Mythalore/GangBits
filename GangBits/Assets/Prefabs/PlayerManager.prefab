@@ -51,11 +51,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b589ac8efe68c748b7f3ab620c49b11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1Object: {fileID: 1108872591319814, guid: 18dbae88b5dc63249baf30b69c4929cc,
+  player1: 0
+  player2: 0
+  player3: 0
+  player4: 0
+  player1Object: {fileID: 1466852378242098, guid: 01b2f93687c700a4099e4ffe0d9698e3,
     type: 2}
-  player2Object: {fileID: 1108872591319814, guid: e19e120da4c69304e88d558b65d6ad76,
+  player2Object: {fileID: 1653244360281492, guid: 1582a01aaf123b64fb7512714c4c7ce6,
     type: 2}
-  player3Object: {fileID: 1108872591319814, guid: 263bef76012595b4e8ecbaa35d121dab,
+  player3Object: {fileID: 1225585216690820, guid: 5c592973800f8e94799e5ceaa02f8872,
     type: 2}
-  player4Object: {fileID: 1108872591319814, guid: 3bb1b6811acf670479ba6ef55cbd4410,
+  player4Object: {fileID: 1268610556992662, guid: c3b01c091d509ce49bbcb4271a0e04e7,
     type: 2}

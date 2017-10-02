@@ -8,9 +8,9 @@ public class PlayerManagement : MonoBehaviour {
     public static PlayerManagement Instance;
 
    public bool player1 = false;
-    bool player2 = false;
-    bool player3 = false;
-    bool player4 = false;
+    public bool player2 = false;
+   public  bool player3 = false;
+    public bool player4 = false;
     public GameObject player1Object;
     public GameObject player2Object;
     public GameObject player3Object;
@@ -70,7 +70,7 @@ public class PlayerManagement : MonoBehaviour {
 
         if(Input.GetButton("Tim's Level"))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
 		
 	}
@@ -111,7 +111,7 @@ public class PlayerManagement : MonoBehaviour {
             if (player1)
             {
                 Instantiate(player1Object);
-                player1Object.transform.position = new Vector3(0.5f, -1.0f, 0.0f);
+                player1Object.transform.position = new Vector3(0.5f, 2.0f, 0.0f);
             }
 
             if (player2)

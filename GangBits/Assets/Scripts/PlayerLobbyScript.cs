@@ -35,15 +35,36 @@ public class PlayerLobbyScript : MonoBehaviour {
         }
         else if(this.gameObject.tag == "Player2")
         {
-
+            if (playerManager.player2 == true)
+            {
+                gameObject.GetComponent<Renderer>().material.color = Color.blue;
+            }
+            else
+            {
+                gameObject.GetComponent<Renderer>().material.color = Color.red;
+            }
         }
         else if (this.gameObject.tag == "Player3")
         {
-
+            if (playerManager.player3 == true)
+            {
+                gameObject.GetComponent<Renderer>().material.color = Color.blue;
+            }
+            else
+            {
+                gameObject.GetComponent<Renderer>().material.color = Color.red;
+            }
         }
         else if (this.gameObject.tag == "Player4")
         {
-
+            if (playerManager.player4 == true)
+            {
+                gameObject.GetComponent<Renderer>().material.color = Color.blue;
+            }
+            else
+            {
+                gameObject.GetComponent<Renderer>().material.color = Color.red;
+            }
         }
 		
 	}
