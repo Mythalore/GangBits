@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Trucks
+  m_Name: FrontTruck_Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -24,61 +24,37 @@ AnimationClip:
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.48333332
-        value: {x: -2.82, y: 1.3281263, z: -10}
+        time: 0.5
+        value: {x: -0.93, y: 1.3281263, z: -10}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.98333335
-        value: {x: -1.78, y: 1.3281263, z: -10}
+        time: 1
+        value: {x: -2.43, y: 1.3281263, z: -10}
+        inSlope: {x: -3, y: 0, z: 0}
+        outSlope: {x: -3, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1.5
+        value: {x: -3.93, y: 1.3281263, z: -10}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
-        time: 1.4833333
-        value: {x: -2.84, y: 1.3281263, z: -10}
+        time: 2
+        value: {x: -2.43, y: 1.3281263, z: -10}
+        inSlope: {x: 3, y: 0, z: 0}
+        outSlope: {x: 3, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 2.5
+        value: {x: -0.93, y: 1.3281263, z: -10}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
-        time: 1.9833333
-        value: {x: -2.02, y: 1.3281263, z: -10}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 2.4833333
-        value: {x: -3, y: 1.3281263, z: -10}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 2.9833333
-        value: {x: -1.91, y: 1.3281263, z: -10}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 3.4833333
-        value: {x: -3.1, y: 1.3281263, z: -10}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 3.9833333
-        value: {x: -2.05, y: 1.3281263, z: -10}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 4.483333
-        value: {x: -3.27, y: 1.3281263, z: -10}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 4.983333
+        time: 3
         value: {x: -2.43, y: 1.3281263, z: -10}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -86,7 +62,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Truck
+    path: Truck Front
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -97,7 +73,7 @@ AnimationClip:
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
-        time: 4.983333
+        time: 3
         value: {x: -22.43, y: 1.3281263, z: -10}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -117,7 +93,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 202234894
+      path: 3255422187
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -136,7 +112,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 4.983333
+    m_StopTime: 3
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -162,61 +138,37 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.48333332
-        value: -2.82
+        time: 0.5
+        value: -0.93
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.98333335
-        value: -1.78
+        time: 1
+        value: -2.43
+        inSlope: -3
+        outSlope: -3
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 1.5
+        value: -3.93
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 1.4833333
-        value: -2.84
+        time: 2
+        value: -2.43
+        inSlope: 3
+        outSlope: 3
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 2.5
+        value: -0.93
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 1.9833333
-        value: -2.02
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 2.4833333
-        value: -3
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 2.9833333
-        value: -1.91
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 3.4833333
-        value: -3.1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 3.9833333
-        value: -2.05
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 4.483333
-        value: -3.27
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 4.983333
+        time: 3
         value: -2.43
         inSlope: 0
         outSlope: 0
@@ -225,7 +177,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Truck
+    path: Truck Front
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -238,61 +190,37 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.48333332
+        time: 0.5
         value: 1.3281263
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.98333335
+        time: 1
         value: 1.3281263
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 1.4833333
+        time: 1.5
         value: 1.3281263
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 1.9833333
+        time: 2
         value: 1.3281263
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 2.4833333
+        time: 2.5
         value: 1.3281263
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 2.9833333
-        value: 1.3281263
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 3.4833333
-        value: 1.3281263
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 3.9833333
-        value: 1.3281263
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 4.483333
-        value: 1.3281263
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 4.983333
+        time: 3
         value: 1.3281263
         inSlope: 0
         outSlope: 0
@@ -301,7 +229,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Truck
+    path: Truck Front
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -314,61 +242,37 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.48333332
+        time: 0.5
         value: -10
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.98333335
+        time: 1
         value: -10
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 1.4833333
+        time: 1.5
         value: -10
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 1.9833333
+        time: 2
         value: -10
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 2.4833333
+        time: 2.5
         value: -10
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 2.9833333
-        value: -10
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 3.4833333
-        value: -10
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 3.9833333
-        value: -10
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 4.483333
-        value: -10
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 4.983333
+        time: 3
         value: -10
         inSlope: 0
         outSlope: 0
@@ -377,7 +281,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Truck
+    path: Truck Front
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -390,7 +294,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 4.983333
+        time: 3
         value: -22.43
         inSlope: 0
         outSlope: 0
@@ -412,7 +316,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 4.983333
+        time: 3
         value: 1.3281263
         inSlope: 0
         outSlope: 0
@@ -434,7 +338,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 4.983333
+        time: 3
         value: -10
         inSlope: 0
         outSlope: 0
