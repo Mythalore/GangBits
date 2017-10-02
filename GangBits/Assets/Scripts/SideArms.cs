@@ -10,17 +10,16 @@ public class SideArms : MonoBehaviour {
     private Transform rightArmTran;
 	// Use this for initialization
 	void Start () {
-        store = GetComponent<Direction>();
-        leftArmTran = LeftArm.transform;
-        rightArmTran = RightArm.transform;
+        store = GetComponent<Direction>(); //Gets the direction the player is facing
+        leftArmTran = LeftArm.transform; //Stores the initial values of the arm
+        rightArmTran = RightArm.transform; //Stores the initial value of the arms
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        //transform = gameObject.transform;
 	}
 
-    public void ArmDirection()
+    public void ArmDirection() //When called it validates the side the arms should be on and swaps the sides
     {
         bool getDir = store.FacingLeft;
         print(getDir);
