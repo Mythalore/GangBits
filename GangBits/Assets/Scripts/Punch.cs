@@ -33,22 +33,22 @@ public class Punch : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (Input.GetMouseButton(0) && directionFunc.FacingLeft == false) //Right Facing
+        if (Input.GetKey("joystick button 0") && directionFunc.FacingLeft == false) //Right Facing
         {
             rightHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 3.0f, 0.8f), rightHand.transform.localPosition.y, rightHand.transform.localPosition.z);
             leftHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 2.5f, 0.8f), leftHand.transform.localPosition.y, leftHand.transform.localPosition.z);
         }
-        else if (Input.GetMouseButton(0) && directionFunc.FacingLeft == true) //Left Facing
+        else if (Input.GetKey("joystick button 0") && directionFunc.FacingLeft == true) //Left Facing
         {
             rightHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 3.0f, -0.8f), rightHand.transform.localPosition.y, rightHand.transform.localPosition.z);
             leftHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 2.5f, -0.8f), leftHand.transform.localPosition.y, leftHand.transform.localPosition.z);
         }
-        else if (Input.GetMouseButtonUp(0) && directionFunc.FacingLeft == false) //Right Facing
+        else if (Input.GetKeyUp("joystick button 0") && directionFunc.FacingLeft == false) //Right Facing
         {
             rightHand.transform.localPosition = rightRightHandvec;
             leftHand.transform.localPosition = rightLeftHandvec;
         }
-        else if (Input.GetMouseButtonUp(0) && directionFunc.FacingLeft == true) //Left Facing
+        else if (Input.GetKeyUp("joystick button 0") && directionFunc.FacingLeft == true) //Left Facing
         {
             rightHand.transform.localPosition = LeftRightHandvec;
             leftHand.transform.localPosition = LeftLeftHandvec;

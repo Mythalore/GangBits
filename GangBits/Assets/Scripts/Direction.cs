@@ -13,16 +13,24 @@ public class Direction : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.A) && FacingLeft != true)
+        float movement = (Input.GetAxis("Horizontal1"));
+        // if (Input.GetKey(KeyCode.A) && FacingLeft != true)
+        // {
+        if (movement < 0 && FacingLeft != true)
         {
             FacingLeft = true;
             sideArm.ArmDirection();
+
         }
-        else if (Input.GetKey(KeyCode.D) && FacingLeft != false)
+       // }
+       // else if (Input.GetKey(KeyCode.D) && FacingLeft != false)
+        //{
+        else if (movement > 0 && FacingLeft != false)
         {
             FacingLeft = false;
             sideArm.ArmDirection();
         }
+       // }
         
 	}
 }
