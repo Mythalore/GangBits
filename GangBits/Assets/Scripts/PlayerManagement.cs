@@ -7,7 +7,7 @@ public class PlayerManagement : MonoBehaviour {
 
     public static PlayerManagement Instance;
 
-    bool player1 = false;
+   public bool player1 = false;
     bool player2 = false;
     bool player3 = false;
     bool player4 = false;
