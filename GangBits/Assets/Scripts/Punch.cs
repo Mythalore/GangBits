@@ -39,8 +39,8 @@ public class Punch : MonoBehaviour {
         }
         else if (Input.GetKey("joystick button 0") && directionFunc.FacingLeft == true) //Left Facing Punch Animation
         {
-            rightHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 3.0f, -0.8f), rightHand.transform.localPosition.y, rightHand.transform.localPosition.z);
-            leftHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 2.5f, -0.8f), leftHand.transform.localPosition.y, leftHand.transform.localPosition.z);
+            rightHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 3.0f, -0.5f), rightHand.transform.localPosition.y, rightHand.transform.localPosition.z);
+            leftHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 2.5f, -0.5f), leftHand.transform.localPosition.y, leftHand.transform.localPosition.z);
         }
         else if (Input.GetKeyUp("joystick button 0") && directionFunc.FacingLeft == false) //Right Facing Position reset
         {
