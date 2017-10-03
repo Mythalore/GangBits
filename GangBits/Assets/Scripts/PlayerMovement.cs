@@ -40,11 +40,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (this.gameObject.tag == "Player1")
         {
-   //         moveDirection.x = (Input.GetAxis("Horizontal1"));
-			//if(moveDirection.x < 0.1 && moveDirection.x > -0.1 )
-   //         {
-   //             moveDirection.x = 0;
-   //         }
+            moveDirection.x = (Input.GetAxis("Horizontal1"));
+            if (moveDirection.x < 0.1 && moveDirection.x > -0.1)
+            {
+                moveDirection.x = 0;
+            }
             impulse_force = Vector2.ClampMagnitude((speed * moveDirection * rig.mass), max_force);
 
             if (grounded)
@@ -65,6 +65,8 @@ public class PlayerMovement : MonoBehaviour
 
             rig.AddForce(impulse_force, ForceMode2D.Impulse);
             moveDirection = Vector2.zero;
+            impulse_force = Vector2.zero;
+
         }
 
         //PLAYER 2
@@ -92,6 +94,8 @@ public class PlayerMovement : MonoBehaviour
 
             rig.AddForce(impulse_force, ForceMode2D.Impulse);
             moveDirection = Vector2.zero;
+            impulse_force = Vector2.zero;
+
         }
 
         //PLAYER 3
@@ -147,6 +151,8 @@ public class PlayerMovement : MonoBehaviour
 
             rig.AddForce(impulse_force, ForceMode2D.Impulse);
             moveDirection = Vector2.zero;
+            impulse_force = Vector2.zero;
+
         }
     }
 
@@ -156,6 +162,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (col.gameObject.tag == "Ground")
         {
+            Debug.Log("Grounded");
             grounded = true;
         }
 

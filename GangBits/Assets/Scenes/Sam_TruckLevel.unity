@@ -271,7 +271,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4777362618020778, guid: 1582a01aaf123b64fb7512714c4c7ce6, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.96
+      value: 1.17
       objectReference: {fileID: 0}
     - target: {fileID: 4777362618020778, guid: 1582a01aaf123b64fb7512714c4c7ce6, type: 2}
       propertyPath: m_LocalPosition.z
@@ -300,12 +300,17 @@ Prefab:
     - target: {fileID: 114507338556701786, guid: 1582a01aaf123b64fb7512714c4c7ce6,
         type: 2}
       propertyPath: jump_force
-      value: 70
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 114507338556701786, guid: 1582a01aaf123b64fb7512714c4c7ce6,
         type: 2}
       propertyPath: jump_height
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 50155589815996822, guid: 1582a01aaf123b64fb7512714c4c7ce6,
+        type: 2}
+      propertyPath: m_AngularDrag
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1582a01aaf123b64fb7512714c4c7ce6, type: 2}
@@ -1059,7 +1064,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4437205877889918, guid: c3b01c091d509ce49bbcb4271a0e04e7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.9428439
+      value: 1.1528438
       objectReference: {fileID: 0}
     - target: {fileID: 4437205877889918, guid: c3b01c091d509ce49bbcb4271a0e04e7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1088,12 +1093,17 @@ Prefab:
     - target: {fileID: 114580081599462914, guid: c3b01c091d509ce49bbcb4271a0e04e7,
         type: 2}
       propertyPath: jump_force
-      value: 70
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 114580081599462914, guid: c3b01c091d509ce49bbcb4271a0e04e7,
         type: 2}
       propertyPath: jump_height
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 50422590995234092, guid: c3b01c091d509ce49bbcb4271a0e04e7,
+        type: 2}
+      propertyPath: m_AngularDrag
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c3b01c091d509ce49bbcb4271a0e04e7, type: 2}
@@ -1111,7 +1121,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4193270617672612, guid: 01b2f93687c700a4099e4ffe0d9698e3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.8824677
+      value: 1.34
       objectReference: {fileID: 0}
     - target: {fileID: 4193270617672612, guid: 01b2f93687c700a4099e4ffe0d9698e3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1150,7 +1160,22 @@ Prefab:
     - target: {fileID: 114258063448845022, guid: 01b2f93687c700a4099e4ffe0d9698e3,
         type: 2}
       propertyPath: jump_force
-      value: 70
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 50131748881588626, guid: 01b2f93687c700a4099e4ffe0d9698e3,
+        type: 2}
+      propertyPath: m_AngularDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 50131748881588626, guid: 01b2f93687c700a4099e4ffe0d9698e3,
+        type: 2}
+      propertyPath: m_LinearDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114258063448845022, guid: 01b2f93687c700a4099e4ffe0d9698e3,
+        type: 2}
+      propertyPath: gravity
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 01b2f93687c700a4099e4ffe0d9698e3, type: 2}
@@ -1168,7 +1193,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4416133085791202, guid: 5c592973800f8e94799e5ceaa02f8872, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.96
+      value: 1.17
       objectReference: {fileID: 0}
     - target: {fileID: 4416133085791202, guid: 5c592973800f8e94799e5ceaa02f8872, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1197,12 +1222,17 @@ Prefab:
     - target: {fileID: 114158508432072460, guid: 5c592973800f8e94799e5ceaa02f8872,
         type: 2}
       propertyPath: jump_force
-      value: 70
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 114158508432072460, guid: 5c592973800f8e94799e5ceaa02f8872,
         type: 2}
       propertyPath: jump_height
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 50576353878778744, guid: 5c592973800f8e94799e5ceaa02f8872,
+        type: 2}
+      propertyPath: m_AngularDrag
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c592973800f8e94799e5ceaa02f8872, type: 2}
@@ -1277,6 +1307,36 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+--- !u!1 &1320622226 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1448442515741290, guid: 1659d2fb2eb1c1045910a76c76d5a306,
+    type: 2}
+  m_PrefabInternal: {fileID: 2043489201}
+--- !u!61 &1320622229
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1320622226}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.285021, y: -0.49004677}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.5700276, y: 0.31806237}
+  m_EdgeRadius: 0
 --- !u!1 &1425032392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,7 +1899,16 @@ Prefab:
       propertyPath: m_Name
       value: Truck Front
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1448442515741290, guid: 1659d2fb2eb1c1045910a76c76d5a306, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1268188061313706, guid: 1659d2fb2eb1c1045910a76c76d5a306, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 61711778830585800, guid: 1659d2fb2eb1c1045910a76c76d5a306, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1659d2fb2eb1c1045910a76c76d5a306, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &2043489204 stripped
