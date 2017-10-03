@@ -507,7 +507,7 @@ GameObject:
   - component: {fileID: 545121400}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2194,6 +2194,10 @@ Prefab:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 1782190378474966, guid: 1659d2fb2eb1c1045910a76c76d5a306, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61711778830585800, guid: 1659d2fb2eb1c1045910a76c76d5a306, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1659d2fb2eb1c1045910a76c76d5a306, type: 2}
@@ -2473,7 +2477,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1782190378474966, guid: 1659d2fb2eb1c1045910a76c76d5a306, type: 2}
       propertyPath: m_TagString
-      value: Untagged
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 4300836055870692, guid: 1659d2fb2eb1c1045910a76c76d5a306, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2490,6 +2494,14 @@ Prefab:
     - target: {fileID: 4300836055870692, guid: 1659d2fb2eb1c1045910a76c76d5a306, type: 2}
       propertyPath: m_LocalScale.y
       value: 3.49431
+      objectReference: {fileID: 0}
+    - target: {fileID: 1448442515741290, guid: 1659d2fb2eb1c1045910a76c76d5a306, type: 2}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451680304059684, guid: 1659d2fb2eb1c1045910a76c76d5a306, type: 2}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1659d2fb2eb1c1045910a76c76d5a306, type: 2}
