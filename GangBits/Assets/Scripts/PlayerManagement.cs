@@ -34,8 +34,12 @@ public class PlayerManagement : MonoBehaviour {
         Debug.Log(scene);
         if (scene.name == "Lobby")
         {
+            if (Input.GetButton("BackToMenu"))
+            {
+                SceneManager.LoadScene(0);
+            }
 
-            if(Input.GetButton("P1Confirm"))
+            if (Input.GetButton("P1Confirm"))
             {
                 if (player1 == false)
                 {
@@ -117,9 +121,13 @@ public class PlayerManagement : MonoBehaviour {
 
         if(Input.GetButton("Tim's Level"))
         {
-            if (playerCount >= 2)
+            Scene scene1 = SceneManager.GetActiveScene();
+            if (scene.name == "Lobby")
             {
-                SceneManager.LoadScene(2);
+                if (playerCount >= 2)
+                {
+                    SceneManager.LoadScene(2);
+                }
             }
         }
 		
@@ -158,7 +166,7 @@ public class PlayerManagement : MonoBehaviour {
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Scene scene1 = SceneManager.GetActiveScene();
-        if (scene.name != "Lobby")
+        if (scene.name != "Lobby" && scene.name != "Callan")
         {
             Debug.Log(player1);
             if (player1)
