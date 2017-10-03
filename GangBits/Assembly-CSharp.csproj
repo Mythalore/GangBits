@@ -52,7 +52,7 @@
      <Compile Include="Assets\Scripts\Direction.cs" />
      <Compile Include="Assets\Scripts\KillboxScript.cs" />
      <Compile Include="Assets\Scripts\Knockback.cs" />
-     <Compile Include="Assets\Scripts\Movement.cs" />
+     <Compile Include="Assets\Scripts\Knockout.cs" />
      <Compile Include="Assets\Scripts\PlayerLobbyScript.cs" />
      <Compile Include="Assets\Scripts\PlayerManagement.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
