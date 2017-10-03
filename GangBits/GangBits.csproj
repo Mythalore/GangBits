@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\Direction.cs" />
     <Compile Include="Assets\Scripts\KillboxScript.cs" />
+    <Compile Include="Assets\Scripts\Knockback.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\PlayerLobbyScript.cs" />
     <Compile Include="Assets\Scripts\PlayerManagement.cs" />

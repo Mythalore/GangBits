@@ -18,7 +18,9 @@ public class Punch : MonoBehaviour {
     //-     -       -       -       -
     //Outside Function
     private Direction directionFunc;
-	private string player_name = "";
+
+
+    private string player_name = "";
 	private string punch_button = "";
     // Use this for initialization
     void Start () {
@@ -53,9 +55,11 @@ public class Punch : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () { //Joystick button 0 is the A button on the controller
+    void Update ()
+    { //Joystick button 0 is the A button on the controller
 
-		if (gameObject.tag == player_name) {
+		if (gameObject.tag == player_name)
+        {
 			if (Input.GetKey(punch_button) && directionFunc.FacingLeft == false) //Right Facing Punch Animation
 			{
 				rightHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 3.0f, 0.8f), rightHand.transform.localPosition.y, rightHand.transform.localPosition.z);
@@ -79,4 +83,6 @@ public class Punch : MonoBehaviour {
 		}
 
     }
+
+  
 }
