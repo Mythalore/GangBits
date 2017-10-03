@@ -11,6 +11,12 @@ public class PlayerManagement : MonoBehaviour {
     public bool player2 = false;
    public  bool player3 = false;
     public bool player4 = false;
+    int player1Lives = 3;
+    int player2Lives = 3;
+    int player3Lives = 3;
+    int player4Lives = 3;
+    public int playerCount = 0;
+
     public GameObject player1Object;
     public GameObject player2Object;
     public GameObject player3Object;
@@ -29,48 +35,87 @@ public class PlayerManagement : MonoBehaviour {
         {
             if(Input.GetButton("P1Confirm"))
             {
-                player1 = true;
-                Debug.Log("PLayer 1 confirmed");
+                if (player1 == false)
+                {
+                    player1 = true;
+                    playerCount++;
+                }
+                
                 
             }
             else if(Input.GetButton("P1Cancel"))
             {
-                player1 = false;
-                Debug.Log("PLayer 1 cancelled");
+                if(player1 == true)
+                {
+                    playerCount--;
+                    player1 = false;
+                    Debug.Log("PLayer 1 cancelled");
+                }
+                
+                
+                
+                
             }
 
             if (Input.GetButton("P2Confirm"))
             {
-                player2 = true;
+                if (!player2)
+                {
+                    player2 = true;
+                    playerCount++;
+                }
             }
             else if (Input.GetButton("P2Cancel"))
             {
-                player2 = false;
+                if (player2)
+                {
+                    player2 = false;
+                    playerCount--;
+                }
             }
 
             if (Input.GetButton("P3Confirm"))
             {
-                player3 = true;
+                if (!player3)
+                {
+                    player3 = true;
+                    playerCount++;
+                }
             }
             else if (Input.GetButton("P3Cancel"))
             {
-                player3 = false;
+                if (player3)
+                {
+                    player3 = false;
+                    playerCount--;
+                }
             }
 
             if (Input.GetButton("P4Confirm"))
             {
-                player4 = true;
+                if (!player4)
+                {
+                    player4 = true;
+                    playerCount++;
+                }
             }
             else if (Input.GetButton("P4Cancel"))
             {
-                player4 = false;
+                if (player4)
+                {
+                    player4 = false;
+                    playerCount--;
+                }
             }
 
         }
 
         if(Input.GetButton("Tim's Level"))
         {
-            SceneManager.LoadScene(2);
+            if (playerCount >= 2)
+            {
+                SceneManager.LoadScene(2);
+            }
         }
 		
 	}
@@ -110,26 +155,38 @@ public class PlayerManagement : MonoBehaviour {
             Debug.Log(player1);
             if (player1)
             {
+            if (player1Lives != 0)
+            {
                 Instantiate(player1Object);
                 player1Object.transform.position = new Vector3(0.5f, 2.0f, 0.0f);
+            }
             }
 
             if (player2)
             {
+            if (player2Lives != 0)
+            {
                 Instantiate(player2Object);
                 player2Object.transform.position = new Vector3(1.5f, 2.0f, 0.0f);
+            }
             }
 
             if (player3)
             {
-                Instantiate(player3Object);
-                player3Object.transform.position = new Vector3(2.5f, 2.0f, 0.0f);
+                if (player3Lives != 0)
+                {
+                    Instantiate(player3Object);
+                    player3Object.transform.position = new Vector3(2.5f, 2.0f, 0.0f);
+                }
             }
 
             if (player4)
             {
-                Instantiate(player4Object);
-                player4Object.transform.position = new Vector3(-0.5f, 2.0f, 0.0f);
+                    if (player4Lives != 0)
+                    {
+                        Instantiate(player4Object);
+                        player4Object.transform.position = new Vector3(-0.5f, 2.0f, 0.0f);
+                    }
             }
        // }
     }
