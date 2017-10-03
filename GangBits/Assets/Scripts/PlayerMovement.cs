@@ -12,8 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public float jump_height = 1.0f;
     public float gravity = 50.0f;
     public float jump_force = 50.0f;
-
     public Vector2 impulse_force = Vector2.zero;
+	public AudioSource jump;
 
     private Knockout knockedOutFunc;
     private bool knockedOutRef;
@@ -81,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
 				if(Input.GetButton(jump_string)  )
                 {
                     rig.AddForce(new Vector2(0, jump_force * rig.mass));
+					jump.Play ();
                 }
                 
             }
