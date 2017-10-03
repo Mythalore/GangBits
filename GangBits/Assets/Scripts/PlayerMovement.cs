@@ -69,7 +69,6 @@ public class PlayerMovement : MonoBehaviour
         knockedOutRef = knockedOutFunc.knockedOut;
         if (gameObject.tag == player_name && knockedOutRef == false)
         {
-
             moveDirection.x = (Input.GetAxis(axis_string));
             if (moveDirection.x < 0.1 && moveDirection.x > -0.1)
             {
@@ -86,20 +85,17 @@ public class PlayerMovement : MonoBehaviour
                 }
                 
             }
-            else
-            {
-                moveDirection.y = 0;
-                //Debug.Log("going down");
-            }
-
-            rig.AddForce(new Vector2(0, -gravity * rig.mass));
-            rig.AddForce(impulse_force, ForceMode2D.Impulse);
-            moveDirection = Vector2.zero;
-            impulse_force = Vector2.zero;
-
+        }
+        if (!grounded)
+        {
+            moveDirection.y = 0;
+            //Debug.Log("going down");
         }
 
-        
+        rig.AddForce(new Vector2(0, -gravity * rig.mass));
+        rig.AddForce(impulse_force, ForceMode2D.Impulse);
+        moveDirection = Vector2.zero;
+        impulse_force = Vector2.zero;
     }
 
 

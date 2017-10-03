@@ -5,12 +5,14 @@ using UnityEngine;
 public class Knockout : MonoBehaviour {
     public int knockoutTolerance = 10;
     public bool knockedOut = false;
-    public int timeKnockedOut;
     private Knockout knockOutFunc;
+    private Color color;
     private float time;
+    private float time2;
 	// Use this for initialization
 	void Start () {
         time = Time.time;
+        color = gameObject.GetComponent<Renderer>().material.color;
 	}
 	
 	// Update is called once per frame
@@ -18,11 +20,11 @@ public class Knockout : MonoBehaviour {
         if (knockedOut == true)
         {
             if (Time.time >= time + 5f)
-            {
+            { 
                 time = Time.time;
                 knockoutTolerance = 3;
                 knockedOut = false;
-
+                
             }
         }
         else if (knockoutTolerance <= 0)
