@@ -13,26 +13,34 @@ public class SideArms : MonoBehaviour {
 	//bool getDir ;
 
 	void Start () {
-        store = GetComponent<Direction>(); //Gets the direction the player is facing
-        leftArmTran = LeftArm.transform; //Stores the initial values of the arm
-        rightArmTran = RightArm.transform; //Stores the initial value of the arms
+        
 
-		if (this.gameObject.tag == "Player1") {
+		if (gameObject.tag == "Player1") {
 			player_name = "Player1";
-			//punch_button = "joystick 1 button 0";
-		}
-		if (this.gameObject.tag == "Player2") {
+            store = GetComponent<Direction>(); //Gets the direction the player is facing
+            leftArmTran = LeftArm.transform; //Stores the initial values of the arm
+            rightArmTran = RightArm.transform; //Stores the initial value of the arms
+                                               
+        }
+		else if (gameObject.tag == "Player2") {
 			player_name = "Player2";
-			//punch_button = "joystick 2 button 0";
-		}
-		if (this.gameObject.tag == "Player3") {
+            store = GetComponent<Direction>(); //Gets the direction the player is facing
+            leftArmTran = LeftArm.transform; //Stores the initial values of the arm
+            rightArmTran = RightArm.transform; //Stores the initial value of the arms
+                                               
+        }
+		else if (gameObject.tag == "Player3") {
 			player_name = "Player3";
-			//punch_button = "joystick 3 button 0";
-		}
-		if (this.gameObject.tag == "Player4") {
+            store = GetComponent<Direction>(); //Gets the direction the player is facing
+            leftArmTran = LeftArm.transform; //Stores the initial values of the arm
+            rightArmTran = RightArm.transform; //Stores the initial value of the arms                                              
+        }
+		else if (gameObject.tag == "Player4") {
 			player_name = "Player4";
-			//punch_button = "joystick 4 button 0";
-		}
+            store = GetComponent<Direction>(); //Gets the direction the player is facing
+            leftArmTran = LeftArm.transform; //Stores the initial values of the arm
+            rightArmTran = RightArm.transform; //Stores the initial value of the arms                                               
+        }
 
 	}
 	
@@ -43,17 +51,20 @@ public class SideArms : MonoBehaviour {
     public void ArmDirection() //When called it validates the side the arms should be on and swaps the sides
     {
        // print(getDir);
-		if (this.gameObject.tag == player_name) {
+		if (gameObject.tag == player_name) {
+
 			bool getDir = store.FacingLeft;
+            Debug.Log(player_name + store.FacingLeft);
+
 			if (getDir == true)
 			{
-				this.LeftArm.transform.localPosition = new Vector3(-leftArmTran.localPosition.x, leftArmTran.localPosition.y, leftArmTran.localPosition.z);
-				this.RightArm.transform.localPosition = new Vector3(-rightArmTran.localPosition.x, rightArmTran.localPosition.y, rightArmTran.localPosition.z);
+				LeftArm.transform.localPosition = new Vector3(-leftArmTran.localPosition.x, leftArmTran.localPosition.y, leftArmTran.localPosition.z);
+				RightArm.transform.localPosition = new Vector3(-rightArmTran.localPosition.x, rightArmTran.localPosition.y, rightArmTran.localPosition.z);
 			}
 			else if (getDir == false)
 			{
-				this.LeftArm.transform.localPosition = new Vector3(-leftArmTran.localPosition.x, leftArmTran.localPosition.y, leftArmTran.localPosition.z);
-				this.RightArm.transform.localPosition = new Vector3(-rightArmTran.localPosition.x, rightArmTran.localPosition.y, rightArmTran.localPosition.z);
+				LeftArm.transform.localPosition = new Vector3(-leftArmTran.localPosition.x, leftArmTran.localPosition.y, leftArmTran.localPosition.z);
+				RightArm.transform.localPosition = new Vector3(-rightArmTran.localPosition.x, rightArmTran.localPosition.y, rightArmTran.localPosition.z);
 			}		
 		}
 
