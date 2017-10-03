@@ -7,11 +7,6 @@ public class Punch : MonoBehaviour {
     public GameObject rightHand;
     public GameObject leftHand;
 
-	public GameObject Player1;
-	public GameObject Player2;
-	public GameObject Player3;
-	public GameObject Player4;
-
     private Transform RightrightHandStore;
     private Transform RightleftHandStore;
     private Vector3 rightLeftHandvec;
@@ -23,7 +18,9 @@ public class Punch : MonoBehaviour {
     //-     -       -       -       -
     //Outside Function
     private Direction directionFunc;
-	private string player_name = "";
+
+
+    private string player_name = "";
 	private string punch_button = "";
     // Use this for initialization
     void Start () {
@@ -38,19 +35,19 @@ public class Punch : MonoBehaviour {
         LeftLeftHandvec = new Vector3(-RightleftHandStore.localPosition.x, RightleftHandStore.localPosition.y, RightleftHandStore.localPosition.z); //Location of left hand when facing left
         LeftRightHandvec = new Vector3(-RightrightHandStore.localPosition.x, RightrightHandStore.localPosition.y, RightrightHandStore.localPosition.z); //Location of right hand when facing left
 
-		if (this.gameObject.tag == "Player1") {
+		if (gameObject.tag == "Player1") {
 			player_name = "Player1";
 			punch_button = "joystick 1 button 0";
 		}
-		if (this.gameObject.tag == "Player2") {
+		if (gameObject.tag == "Player2") {
 			player_name = "Player2";
 			punch_button = "joystick 2 button 0";
 		}
-		if (this.gameObject.tag == "Player3") {
+		if (gameObject.tag == "Player3") {
 			player_name = "Player3";
 			punch_button = "joystick 3 button 0";
 		}
-		if (this.gameObject.tag == "Player4") {
+		if (gameObject.tag == "Player4") {
 			player_name = "Player4";
 			punch_button = "joystick 4 button 0";
 		}
@@ -58,29 +55,34 @@ public class Punch : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update () { //Joystick button 0 is the A button on the controller
-		if (this.gameObject.tag == player_name) {
+    void Update ()
+    { //Joystick button 0 is the A button on the controller
+
+		if (gameObject.tag == player_name)
+        {
 			if (Input.GetKey(punch_button) && directionFunc.FacingLeft == false) //Right Facing Punch Animation
 			{
-				this.rightHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 3.0f, 0.8f), rightHand.transform.localPosition.y, rightHand.transform.localPosition.z);
-				this.leftHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 2.5f, 0.8f), leftHand.transform.localPosition.y, leftHand.transform.localPosition.z);
+				rightHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 3.0f, 0.8f), rightHand.transform.localPosition.y, rightHand.transform.localPosition.z);
+				leftHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 2.5f, 0.8f), leftHand.transform.localPosition.y, leftHand.transform.localPosition.z);
 			}
 			else if (Input.GetKey(punch_button) && directionFunc.FacingLeft == true) //Left Facing Punch Animation
 			{
-				this.rightHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 3.0f, -0.5f), rightHand.transform.localPosition.y, rightHand.transform.localPosition.z);
-				this.leftHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 2.5f, -0.5f), leftHand.transform.localPosition.y, leftHand.transform.localPosition.z);
+				rightHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 3.0f, -0.5f), rightHand.transform.localPosition.y, rightHand.transform.localPosition.z);
+				leftHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 2.5f, -0.5f), leftHand.transform.localPosition.y, leftHand.transform.localPosition.z);
 			}
 			else if (Input.GetKeyUp(punch_button) && directionFunc.FacingLeft == false) //Right Facing Position reset
 			{
-				this.rightHand.transform.localPosition = rightRightHandvec;
-				this.leftHand.transform.localPosition = rightLeftHandvec;
+				rightHand.transform.localPosition = rightRightHandvec;
+				leftHand.transform.localPosition = rightLeftHandvec;
 			}
 				else if (Input.GetKeyUp(punch_button) && directionFunc.FacingLeft == true) //Left Facing Position reset
 			{
-				this.rightHand.transform.localPosition = LeftRightHandvec;
-				this.leftHand.transform.localPosition = LeftLeftHandvec;
+				rightHand.transform.localPosition = LeftRightHandvec;
+				leftHand.transform.localPosition = LeftLeftHandvec;
 			}
 		}
 
     }
+
+  
 }

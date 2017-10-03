@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4207569983867262}
   - component: {fileID: 212628727642696470}
   - component: {fileID: 61290614480543652}
+  - component: {fileID: 114504846371201842}
   m_Layer: 0
   m_Name: Right arm
-  m_TagString: Untagged
+  m_TagString: Fists
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,9 +61,10 @@ GameObject:
   - component: {fileID: 4461181118580634}
   - component: {fileID: 212962052009956846}
   - component: {fileID: 61370645485132840}
+  - component: {fileID: 114268289769069758}
   m_Layer: 0
   m_Name: Left arm
-  m_TagString: Untagged
+  m_TagString: Fists
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -233,6 +235,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FacingLeft: 0
+--- !u!114 &114268289769069758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1454217555470192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d53fa3f04afffab45b44be28f19cb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  punch_force: 50
 --- !u!114 &114302806004240962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -259,10 +273,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightHand: {fileID: 1050852883481546}
   leftHand: {fileID: 1454217555470192}
-  Player1: {fileID: 0}
-  Player2: {fileID: 0}
-  Player3: {fileID: 0}
-  Player4: {fileID: 0}
+--- !u!114 &114504846371201842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1050852883481546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d53fa3f04afffab45b44be28f19cb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  punch_force: 50
 --- !u!212 &212412780459653936
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -34,22 +34,22 @@ public class PlayerMovement : MonoBehaviour
         rig.drag = 5.0f;
         rig.freezeRotation = true;
         rig.gravityScale = 0.0f;
-		if (this.gameObject.tag == "Player1") {
+		if (gameObject.tag == "Player1") {
 			axis_string = "Horizontal1";
 			jump_string = "P1 Jump";
 			player_name = "Player1";
 		}
-		if (this.gameObject.tag == "Player2") {
+		if (gameObject.tag == "Player2") {
 			axis_string = "Horizontal2";
 			jump_string = "P2 Jump";
 			player_name = "Player2";
 		}
-		if (this.gameObject.tag == "Player3") {
+		if (gameObject.tag == "Player3") {
 			axis_string = "Horizontal3";
 			jump_string = "P3 Jump";
 			player_name = "Player3";
 		}
-		if (this.gameObject.tag == "Player4") {
+		if (gameObject.tag == "Player4") {
 			axis_string = "Horizontal4";
 			jump_string = "P4 Jump";
 			player_name = "Player4";
@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
     //Update is called once per frame
     void FixedUpdate()
     {
-		if (this.gameObject.tag == player_name)
+		if (gameObject.tag == player_name)
         {
             moveDirection.x = (Input.GetAxis(axis_string));
             if (moveDirection.x < 0.1 && moveDirection.x > -0.1)
@@ -82,10 +82,10 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 moveDirection.y = 0;
-                rig.AddForce(new Vector2(0, -gravity * rig.mass));
                 //Debug.Log("going down");
             }
 
+            rig.AddForce(new Vector2(0, -gravity * rig.mass));
             rig.AddForce(impulse_force, ForceMode2D.Impulse);
             moveDirection = Vector2.zero;
             impulse_force = Vector2.zero;
