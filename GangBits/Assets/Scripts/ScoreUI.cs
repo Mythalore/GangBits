@@ -23,13 +23,26 @@ public class ScoreUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(playerID == players.p1)
-			GetComponent<Text>().text = ""+playerManager.player1Lives;
-		if(playerID == players.p2)
-			GetComponent<Text>().text = ""+playerManager.player2Lives;
-		if(playerID == players.p3)
-			GetComponent<Text>().text = ""+playerManager.player3Lives;
-		if(playerID == players.p4)
-			GetComponent<Text>().text = ""+playerManager.player4Lives;
+        if (playerManager.player1 == true)
+        {
+            if (playerID == players.p1)
+                GetComponent<Text>().text = "" + playerManager.player1Lives;
+        }
+
+        if (playerManager.player2 == true)
+        {
+            if (playerID == players.p2)
+                GetComponent<Text>().text = "" + playerManager.player2Lives;
+        }
+        if (playerManager.player3 == true)
+        {
+            if (playerID == players.p3)
+                GetComponent<Text>().text = "" + playerManager.player3Lives;
+        }
+        if (playerManager.player4 == true)
+        {
+            if (playerID == players.p4)
+                GetComponent<Text>().text = "" + playerManager.player4Lives;
+        }
 	}
 }
