@@ -7,6 +7,8 @@ public class Punch : MonoBehaviour {
     public GameObject rightHand;
     public GameObject leftHand;
 
+    public bool isPunching = false;
+
     private Transform RightrightHandStore;
     private Transform RightleftHandStore;
     private Vector3 rightLeftHandvec;
@@ -66,26 +68,29 @@ public class Punch : MonoBehaviour {
         {
             if (Input.GetKey(punch_button) && directionFunc.FacingLeft == false) //Right Facing Punch Animation
             {
+                isPunching = true;
                 rightHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 3.0f, 0.8f), rightHand.transform.localPosition.y, rightHand.transform.localPosition.z);
                 leftHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 2.5f, 0.8f), leftHand.transform.localPosition.y, leftHand.transform.localPosition.z);
             }
             else if (Input.GetKey(punch_button) && directionFunc.FacingLeft == true) //Left Facing Punch Animation
             {
+                isPunching = true;
                 rightHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 3.0f, -0.5f), rightHand.transform.localPosition.y, rightHand.transform.localPosition.z);
                 leftHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 2.5f, -0.5f), leftHand.transform.localPosition.y, leftHand.transform.localPosition.z);
             }
             else if (Input.GetKeyUp(punch_button) && directionFunc.FacingLeft == false) //Right Facing Position reset
             {
+                isPunching = false;
                 rightHand.transform.localPosition = rightRightHandvec;
                 leftHand.transform.localPosition = rightLeftHandvec;
             }
             else if (Input.GetKeyUp(punch_button) && directionFunc.FacingLeft == true) //Left Facing Position reset
             {
+                isPunching = false;
                 rightHand.transform.localPosition = LeftRightHandvec;
                 leftHand.transform.localPosition = LeftLeftHandvec;
             }
         }
-
     }
 
   

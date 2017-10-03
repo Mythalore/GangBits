@@ -10,6 +10,11 @@ TagManager:
   - Player4
   - Ground
   - PlayerManager
+  - Fists
+  - Fists1
+  - Fists2
+  - Fists3
+  - Fists4
   layers:
   - Default
   - TransparentFX

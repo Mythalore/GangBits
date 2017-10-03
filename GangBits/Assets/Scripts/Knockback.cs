@@ -12,7 +12,8 @@ public class Knockback : MonoBehaviour {
     private GameObject parent;
     private Knockout knockOutFunc;
 
-
+    private Punch punchFunc;
+    private bool isPunchingRef;
     public float punch_force = 10.0f;
 	public AudioSource punch;
 	
@@ -27,6 +28,7 @@ public class Knockback : MonoBehaviour {
         //parent = GetComponentInParent<Rigidbody2D>();
         directionFunc = GetComponentInParent<Direction>();
         knockOutFunc = GetComponentInParent<Knockout>();
+        punchFunc = GetComponentInParent<Punch>();
         if (gameObject.tag == "Player1")
         {
             self_name = "Player1";
@@ -47,7 +49,7 @@ public class Knockback : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        isPunchingRef = punchFunc.isPunching;
 	}
 
     void OnCollisionEnter2D(Collision2D col)
@@ -64,32 +66,49 @@ public class Knockback : MonoBehaviour {
 
         if (col.gameObject.tag == "Player1" && col.gameObject.tag != self_name)
         {
-            //Debug.Log(self_name + "hit P1");
-            col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector , ForceMode2D.Impulse);
-			playPunchSound ();
-            knockOutFunc.Hit(col.gameObject, "Player1");
+            if (isPunchingRef == true)
+            {
+
+                //Debug.Log(self_name + "hit P1");
+                col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector, ForceMode2D.Impulse);
+                playPunchSound();
+                knockOutFunc.Hit(col.gameObject, "Player1");
+
+            }
 
         }
         if (col.gameObject.tag == "Player2" && col.gameObject.tag != self_name)
         {
-            //Debug.Log(self_name + "hit P2");
-            col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector, ForceMode2D.Impulse);
-			playPunchSound ();
-            knockOutFunc.Hit(col.gameObject, "Player2");
+            print(isPunchingRef);
+            if (isPunchingRef == true)
+            {
+                //Debug.Log(self_name + "hit P2");
+                col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector, ForceMode2D.Impulse);
+                playPunchSound();
+                knockOutFunc.Hit(col.gameObject, "Player2");
+            }
         }
         if (col.gameObject.tag == "Player3" && col.gameObject.tag != self_name)
         {
-            //Debug.Log(self_name + "hit P3");
-            col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector, ForceMode2D.Impulse);
-			playPunchSound ();
-            knockOutFunc.Hit(col.gameObject, "Player3");
+            print(isPunchingRef);
+            if (isPunchingRef == true)
+            {
+                //Debug.Log(self_name + "hit P3");
+                col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector, ForceMode2D.Impulse);
+                playPunchSound();
+                knockOutFunc.Hit(col.gameObject, "Player3");
+            }
         }
         if (col.gameObject.tag == "Player4" && col.gameObject.tag != self_name)
         {
-            //Debug.Log(self_name + "hit P4");
-            col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector, ForceMode2D.Impulse);
-			playPunchSound ();
-            knockOutFunc.Hit(col.gameObject, "Player4");
+            print(isPunchingRef);
+            if (isPunchingRef == true)
+            {
+                //Debug.Log(self_name + "hit P4");
+                col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector, ForceMode2D.Impulse);
+                playPunchSound();
+                knockOutFunc.Hit(col.gameObject, "Player4");
+            }
         }
     }
 }

@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114815001778922428}
   m_Layer: 0
   m_Name: Left arm
-  m_TagString: Fists
+  m_TagString: Fists4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 114359710265001062}
   m_Layer: 0
   m_Name: Right arm
-  m_TagString: Fists
+  m_TagString: Fists4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -440,6 +440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightHand: {fileID: 1669250055349174}
   leftHand: {fileID: 1543490442488066}
+  isPunching: 0
 --- !u!114 &114211204537571322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -510,7 +511,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockoutTolerance: 10
   knockedOut: 0
-  timeKnockedOut: 0
 --- !u!114 &114815001778922428
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -564,6 +564,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!212 &212418674125890536
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -604,6 +605,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!212 &212848232253809270
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -644,6 +646,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!212 &212867276447875062
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -684,3 +687,4 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1

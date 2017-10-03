@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114453757673938558}
   m_Layer: 0
   m_Name: Left arm
-  m_TagString: Fists
+  m_TagString: Fists2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 114052188044892898}
   m_Layer: 0
   m_Name: Right arm
-  m_TagString: Fists
+  m_TagString: Fists2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -510,6 +510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightHand: {fileID: 1522215187222354}
   leftHand: {fileID: 1035304679535774}
+  isPunching: 0
 --- !u!114 &114936989122159222
 MonoBehaviour:
   m_ObjectHideFlags: 1

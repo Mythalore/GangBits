@@ -31,7 +31,7 @@ public class PlayerManagement : MonoBehaviour {
 	void Update () {
 
         Scene scene = SceneManager.GetActiveScene();
-        Debug.Log(scene);
+        //Debug.Log(scene);
         if (scene.name == "Lobby")
         {
             if (Input.GetButton("BackToMenu"))
@@ -147,10 +147,10 @@ public class PlayerManagement : MonoBehaviour {
             Destroy(gameObject);
         }
 
-        Debug.Log(player1);
-        Debug.Log(player2);
-        Debug.Log(player3);
-        Debug.Log(player4);
+        //Debug.Log(player1);
+       // Debug.Log(player2);
+       // Debug.Log(player3);
+       // Debug.Log(player4);
     }
 
     void OnEnable()
