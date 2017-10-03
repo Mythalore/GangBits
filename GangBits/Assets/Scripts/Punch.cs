@@ -19,6 +19,8 @@ public class Punch : MonoBehaviour {
     //Outside Function
     private Direction directionFunc;
 
+    private Knockout knockOutFunc;
+    private bool knockOutRef;
 
     private string player_name = "";
 	private string punch_button = "";
@@ -26,6 +28,8 @@ public class Punch : MonoBehaviour {
     void Start () {
 
         directionFunc = GetComponent<Direction>(); // Gets the direction the player is facing
+        knockOutFunc = GetComponent<Knockout>();
+        
 
         RightrightHandStore = rightHand.transform; //Stores the inital values of the hands to move them to resetted positions
         RightleftHandStore = leftHand.transform; // ^
@@ -57,8 +61,8 @@ public class Punch : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     { //Joystick button 0 is the A button on the controller
-
-		if (gameObject.tag == player_name)
+        knockOutRef = knockOutFunc.knockedOut;
+        if (gameObject.tag == player_name && knockOutRef == false)
         {
 			if (Input.GetKey(punch_button) && directionFunc.FacingLeft == false) //Right Facing Punch Animation
 			{

@@ -10,6 +10,7 @@ public class Knockback : MonoBehaviour {
     private Vector3 punch_vector = Vector2.zero;
     private Direction directionFunc;
     private GameObject parent;
+    private Knockout knockOutFunc;
 
     public float punch_force = 10.0f;
 	
@@ -18,7 +19,7 @@ public class Knockback : MonoBehaviour {
 	void Start () {
         //parent = GetComponentInParent<Rigidbody2D>();
         directionFunc = GetComponentInParent<Direction>();
-
+        knockOutFunc = GetComponentInParent<Knockout>();
         if (gameObject.tag == "Player1")
         {
             self_name = "Player1";
@@ -56,24 +57,28 @@ public class Knockback : MonoBehaviour {
 
         if (col.gameObject.tag == "Player1" && col.gameObject.tag != self_name)
         {
-            Debug.Log(self_name + "hit P1");
+            //Debug.Log(self_name + "hit P1");
             col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector , ForceMode2D.Impulse);
+            knockOutFunc.Hit(col.gameObject, "Player1");
         }
         if (col.gameObject.tag == "Player2" && col.gameObject.tag != self_name)
         {
-            Debug.Log(self_name + "hit P2");
+            //Debug.Log(self_name + "hit P2");
             col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector, ForceMode2D.Impulse);
+            knockOutFunc.Hit(col.gameObject, "Player2");
 
         }
         if (col.gameObject.tag == "Player3" && col.gameObject.tag != self_name)
         {
-            Debug.Log(self_name + "hit P3");
+            //Debug.Log(self_name + "hit P3");
             col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector, ForceMode2D.Impulse);
+            knockOutFunc.Hit(col.gameObject, "Player3");
         }
         if (col.gameObject.tag == "Player4" && col.gameObject.tag != self_name)
         {
-            Debug.Log(self_name + "hit P4");
+            //Debug.Log(self_name + "hit P4");
             col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector, ForceMode2D.Impulse);
+            knockOutFunc.Hit(col.gameObject, "Player4");
         }
     }
 }

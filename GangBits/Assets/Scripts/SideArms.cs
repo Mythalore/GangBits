@@ -54,7 +54,7 @@ public class SideArms : MonoBehaviour {
 		if (gameObject.tag == player_name) {
 
 			bool getDir = store.FacingLeft;
-            Debug.Log(player_name + store.FacingLeft);
+            //Debug.Log(player_name + store.FacingLeft);
 
 			if (getDir == true)
 			{

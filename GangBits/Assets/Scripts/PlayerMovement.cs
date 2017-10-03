@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector2 impulse_force = Vector2.zero;
 
+    private Knockout knockedOutFunc;
+    private bool knockedOutRef;
+
     private bool grounded = false;
 	private string axis_string = "";
 	private string jump_string = "";
@@ -29,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         //Initialisations
+        knockedOutFunc = GetComponent<Knockout>();
+        knockedOutRef = knockedOutFunc.knockedOut;
         rig = GetComponent<Rigidbody2D>();
         rig.mass = 5.0f;
         rig.drag = 5.0f;
@@ -61,8 +66,10 @@ public class PlayerMovement : MonoBehaviour
     //Update is called once per frame
     void FixedUpdate()
     {
-		if (gameObject.tag == player_name)
+        knockedOutRef = knockedOutFunc.knockedOut;
+        if (gameObject.tag == player_name && knockedOutRef == false)
         {
+
             moveDirection.x = (Input.GetAxis(axis_string));
             if (moveDirection.x < 0.1 && moveDirection.x > -0.1)
             {
@@ -74,7 +81,6 @@ public class PlayerMovement : MonoBehaviour
             {
 				if(Input.GetButton(jump_string)  )
                 {
-                    //Debug.Log("P1 Jump");
                     rig.AddForce(new Vector2(0, jump_force * rig.mass));
                 }
                 
@@ -101,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
     {
 		if (col.gameObject.tag == "Ground" || col.gameObject.tag == "Player")
         {
-            Debug.Log("Grounded");
+            //Debug.Log("Grounded");
             grounded = true;
         }
 
@@ -122,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
         if(col.gameObject.tag == "Ground")
         {
             transform.parent = col.gameObject.transform;
-            Debug.Log("Parented");
+           // Debug.Log("Parented");
         }
     }
 
