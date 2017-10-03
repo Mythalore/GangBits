@@ -17,27 +17,27 @@ public class SideArms : MonoBehaviour {
 
 		if (gameObject.tag == "Player1") {
 			player_name = "Player1";
-            store = GetComponent<Direction>(); //Gets the direction the player is facing
+            store = gameObject.GetComponent<Direction>(); //Gets the direction the player is facing
             leftArmTran = LeftArm.transform; //Stores the initial values of the arm
             rightArmTran = RightArm.transform; //Stores the initial value of the arms
                                                
         }
 		else if (gameObject.tag == "Player2") {
 			player_name = "Player2";
-            store = GetComponent<Direction>(); //Gets the direction the player is facing
+            store = gameObject.GetComponent<Direction>(); //Gets the direction the player is facing
             leftArmTran = LeftArm.transform; //Stores the initial values of the arm
             rightArmTran = RightArm.transform; //Stores the initial value of the arms
                                                
         }
 		else if (gameObject.tag == "Player3") {
 			player_name = "Player3";
-            store = GetComponent<Direction>(); //Gets the direction the player is facing
+            store = gameObject.GetComponent<Direction>(); //Gets the direction the player is facing
             leftArmTran = LeftArm.transform; //Stores the initial values of the arm
             rightArmTran = RightArm.transform; //Stores the initial value of the arms                                              
         }
 		else if (gameObject.tag == "Player4") {
 			player_name = "Player4";
-            store = GetComponent<Direction>(); //Gets the direction the player is facing
+            store = gameObject.GetComponent<Direction>(); //Gets the direction the player is facing
             leftArmTran = LeftArm.transform; //Stores the initial values of the arm
             rightArmTran = RightArm.transform; //Stores the initial value of the arms                                               
         }
