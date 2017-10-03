@@ -12,9 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public float jump_height = 1.0f;
     public float gravity = 50.0f;
     public float jump_force = 50.0f;
-
     public Vector2 impulse_force = Vector2.zero;
-
+	public AudioSource jump;
     private bool grounded = false;
 	private string axis_string = "";
 	private string jump_string = "";
@@ -76,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     //Debug.Log("P1 Jump");
                     rig.AddForce(new Vector2(0, jump_force * rig.mass));
+					jump.Play ();
                 }
                 
             }

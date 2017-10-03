@@ -10,10 +10,15 @@ public class Knockback : MonoBehaviour {
     private Vector3 punch_vector = Vector2.zero;
     private Direction directionFunc;
     private GameObject parent;
-
     public float punch_force = 10.0f;
+	public AudioSource punch;
 	
-    
+	void playPunchSound()
+	{
+
+		punch.Play ();
+	}
+
     // Use this for initialization
 	void Start () {
         //parent = GetComponentInParent<Rigidbody2D>();
