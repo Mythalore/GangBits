@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 114660667694922944}
   - component: {fileID: 114191780945302354}
   - component: {fileID: 82421831101779884}
+  - component: {fileID: 114478333679099098}
   m_Layer: 0
   m_Name: Player 3 (updated)
   m_TagString: Player3
@@ -458,6 +459,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   punch_force: 20
   punch: {fileID: 82970745964626620}
+--- !u!114 &114478333679099098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1609322925643242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c59106fb511dd488af8b3bc60d855b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockoutTolerance: 10
+  knockedOut: 0
+  timeKnockedOut: 0
 --- !u!114 &114618813575736844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -549,7 +564,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!212 &212447029311439478
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -590,7 +604,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!212 &212614738504354726
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -631,7 +644,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!212 &212659066110722428
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -672,4 +684,3 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1

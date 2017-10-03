@@ -55,12 +55,16 @@ MonoBehaviour:
   player2: 0
   player3: 0
   player4: 0
+  player1Lives: 3
+  player2Lives: 3
+  player3Lives: 3
+  player4Lives: 3
   playerCount: 0
-  player1Object: {fileID: 1466852378242098, guid: 01b2f93687c700a4099e4ffe0d9698e3,
+  player1Object: {fileID: 1376108830902002, guid: 50f09a2f8bee4f148acd1716b945ad18,
     type: 2}
-  player2Object: {fileID: 1653244360281492, guid: 1582a01aaf123b64fb7512714c4c7ce6,
+  player2Object: {fileID: 1092071030365306, guid: 438fdd54594b67d4b80a3eb5ef30a64b,
     type: 2}
-  player3Object: {fileID: 1225585216690820, guid: 5c592973800f8e94799e5ceaa02f8872,
+  player3Object: {fileID: 1609322925643242, guid: 847e13f740e623a43a49462be6cc1064,
     type: 2}
-  player4Object: {fileID: 1268610556992662, guid: c3b01c091d509ce49bbcb4271a0e04e7,
+  player4Object: {fileID: 1931130676147004, guid: 32014703221c87c4bbeae918e5a3096f,
     type: 2}

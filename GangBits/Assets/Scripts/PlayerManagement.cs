@@ -124,7 +124,7 @@ public class PlayerManagement : MonoBehaviour {
             Scene scene1 = SceneManager.GetActiveScene();
             if (scene.name == "Lobby")
             {
-                if (playerCount >= 2)
+                if (playerCount >= 1)
                 {
                     SceneManager.LoadScene(2);
                 }
