@@ -26,7 +26,7 @@ public class PlayerLobbyScript : MonoBehaviour {
         {
             if (playerManager.player1 == true)
             {
-               gameObject.GetComponent<Renderer>().material.color = Color.blue;
+               gameObject.GetComponent<Renderer>().material.color = Color.green;
             }
             else
             {
@@ -37,7 +37,7 @@ public class PlayerLobbyScript : MonoBehaviour {
         {
             if (playerManager.player2 == true)
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.blue;
+                gameObject.GetComponent<Renderer>().material.color = Color.green;
             }
             else
             {
@@ -48,7 +48,7 @@ public class PlayerLobbyScript : MonoBehaviour {
         {
             if (playerManager.player3 == true)
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.blue;
+                gameObject.GetComponent<Renderer>().material.color = Color.green;
             }
             else
             {
@@ -59,7 +59,7 @@ public class PlayerLobbyScript : MonoBehaviour {
         {
             if (playerManager.player4 == true)
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.blue;
+                gameObject.GetComponent<Renderer>().material.color = Color.green;
             }
             else
             {

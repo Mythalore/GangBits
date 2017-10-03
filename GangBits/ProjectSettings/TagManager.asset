@@ -9,6 +9,7 @@ TagManager:
   - Player3
   - Player4
   - Ground
+  - PlayerManager
   layers:
   - Default
   - TransparentFX

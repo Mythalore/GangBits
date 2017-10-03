@@ -11,6 +11,8 @@ public class KillboxScript : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
+
+        playerManagerObject = GameObject.FindGameObjectWithTag("PlayerManager");
         playerManager = playerManagerObject.GetComponent<PlayerManagement>();
         playerCountReset = playerManager.playerCount;
     }

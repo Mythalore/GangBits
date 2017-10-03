@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114327540781709618}
   m_Layer: 0
   m_Name: PlayerManager
-  m_TagString: Untagged
+  m_TagString: PlayerManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,6 +55,7 @@ MonoBehaviour:
   player2: 0
   player3: 0
   player4: 0
+  playerCount: 0
   player1Object: {fileID: 1466852378242098, guid: 01b2f93687c700a4099e4ffe0d9698e3,
     type: 2}
   player2Object: {fileID: 1653244360281492, guid: 1582a01aaf123b64fb7512714c4c7ce6,

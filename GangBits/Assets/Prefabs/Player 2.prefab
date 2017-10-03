@@ -229,9 +229,9 @@ MonoBehaviour:
   speed: 1
   max_force: 20
   moveDirection: {x: 0, y: 0}
-  jump_height: 2
-  gravity: 50
-  jump_force: 150
+  jump_height: 50
+  gravity: 90
+  jump_force: 650
   impulse_force: {x: 0, y: 0}
 --- !u!114 &114584269679690590
 MonoBehaviour:
@@ -246,6 +246,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightHand: {fileID: 1407377718955474}
   leftHand: {fileID: 1323758039031876}
+  Player1: {fileID: 0}
+  Player2: {fileID: 0}
+  Player3: {fileID: 0}
+  Player4: {fileID: 0}
 --- !u!114 &114616779832567360
 MonoBehaviour:
   m_ObjectHideFlags: 1
