@@ -166,7 +166,7 @@ public class PlayerManagement : MonoBehaviour {
            // if (player1Lives != 0)
            // {
                 Instantiate(player1Object);
-                player1Object.transform.position = new Vector3(0.5f, 2.0f, 0.0f);
+                player1Object.transform.position = new Vector3(-5f, 2.0f, 0.0f);
            // }
             }
 
@@ -175,7 +175,7 @@ public class PlayerManagement : MonoBehaviour {
           //  if (player2Lives != 0)
         //    {
                 Instantiate(player2Object);
-                player2Object.transform.position = new Vector3(1.5f, 2.0f, 0.0f);
+                player2Object.transform.position = new Vector3(0f, 2.0f, 0.0f);
          //   }
             }
 
@@ -184,7 +184,7 @@ public class PlayerManagement : MonoBehaviour {
          //       if (player3Lives != 0)
          //       {
                     Instantiate(player3Object);
-                    player3Object.transform.position = new Vector3(2.5f, 2.0f, 0.0f);
+                    player3Object.transform.position = new Vector3(5f, 2.0f, 0.0f);
          //       }
             }
 
@@ -193,7 +193,7 @@ public class PlayerManagement : MonoBehaviour {
          //           if (player4Lives != 0)
           //          {
                         Instantiate(player4Object);
-                        player4Object.transform.position = new Vector3(-0.5f, 2.0f, 0.0f);
+                        player4Object.transform.position = new Vector3(10f, 2.0f, 0.0f);
          //           }
             }
         }

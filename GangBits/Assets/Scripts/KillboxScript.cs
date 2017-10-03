@@ -3,28 +3,31 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class KillboxScript : MonoBehaviour {
+public class KillboxScript : MonoBehaviour
+{
 
     public GameObject playerManagerObject;
     public PlayerManagement playerManager;
     int playerCountReset;
-    
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start()
+    {
 
         playerManagerObject = GameObject.FindGameObjectWithTag("PlayerManager");
-        if(playerManagerObject == null)
+        if (playerManagerObject == null)
         {
             Debug.Log("No playermanager");
         }
         playerManager = playerManagerObject.GetComponent<PlayerManagement>();
         playerCountReset = playerManager.playerCount;
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
@@ -34,40 +37,44 @@ public class KillboxScript : MonoBehaviour {
         if (collider.tag == "Player1")
         {
             playerManager.player1Lives--;
+            playerManager.playerCount--;
             if (playerManager.player1Lives == 0)
             {
                 playerManager.player1 = false;
                 playerCountReset--;
             }
         }
-        else if(collider.tag == "Player2")
+        else if (collider.tag == "Player2")
         {
             playerManager.player2Lives--;
+            playerManager.playerCount--;
             if (playerManager.player2Lives == 0)
             {
                 playerManager.player2 = false;
                 playerCountReset--;
             }
         }
-        else if(collider.tag == "Player3")
+        else if (collider.tag == "Player3")
         {
             playerManager.player3Lives--;
+            playerManager.playerCount--;
             if (playerManager.player3Lives == 0)
             {
                 playerManager.player3 = false;
                 playerCountReset--;
             }
         }
-        else if(collider.tag == "Player4")
+        else if (collider.tag == "Player4")
         {
             playerManager.player4Lives--;
-            if(playerManager.player4Lives == 0)
+            playerManager.playerCount--;
+            if (playerManager.player4Lives == 0)
             {
                 playerManager.player4 = false;
                 playerCountReset--;
             }
         }
-        playerManager.playerCount--;
+        
 
         if (playerManager.playerCount <= 1)
         {
@@ -76,18 +83,18 @@ public class KillboxScript : MonoBehaviour {
             {
                 SceneManager.LoadScene(3);
             }
-            else if(scene.name == "Sam_TrainLevel")
+            else if (scene.name == "Sam_TrainLevel")
             {
                 SceneManager.LoadScene(2);
             }
-                playerManager.playerCount = playerCountReset;
+            playerManager.playerCount = playerCountReset;
         }
 
-        
+
 
         Destroy(collider);
 
-        if(playerCountReset == 1)
+        if (playerCountReset == 1)
         {
             Debug.Log("Player 1 wins!");
             playerManager.player1 = false;
