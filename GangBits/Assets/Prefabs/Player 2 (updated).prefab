@@ -110,7 +110,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1092071030365306}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.47466928, y: 1.9699912, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 4493650492344542}
@@ -485,7 +485,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockoutTolerance: 10
   knockedOut: 0
-  timeKnockedOut: 0
 --- !u!114 &114658867950591366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -564,6 +563,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!212 &212077135340270152
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -604,6 +604,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!212 &212139746672312236
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -644,6 +645,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!212 &212461603344008624
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -684,3 +686,4 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1

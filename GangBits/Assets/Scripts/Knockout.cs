@@ -22,7 +22,7 @@ public class Knockout : MonoBehaviour {
             if (Time.time >= time + 5f)
             { 
                 time = Time.time;
-                knockoutTolerance = 3;
+                knockoutTolerance = 10;
                 knockedOut = false;
                 
             }
