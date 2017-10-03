@@ -8,11 +8,32 @@ public class SideArms : MonoBehaviour {
     public GameObject RightArm;
     private Transform leftArmTran;
     private Transform rightArmTran;
+	private string player_name = "";
 	// Use this for initialization
+	//bool getDir ;
+
 	void Start () {
         store = GetComponent<Direction>(); //Gets the direction the player is facing
         leftArmTran = LeftArm.transform; //Stores the initial values of the arm
         rightArmTran = RightArm.transform; //Stores the initial value of the arms
+
+		if (this.gameObject.tag == "Player1") {
+			player_name = "Player1";
+			//punch_button = "joystick 1 button 0";
+		}
+		if (this.gameObject.tag == "Player2") {
+			player_name = "Player2";
+			//punch_button = "joystick 2 button 0";
+		}
+		if (this.gameObject.tag == "Player3") {
+			player_name = "Player3";
+			//punch_button = "joystick 3 button 0";
+		}
+		if (this.gameObject.tag == "Player4") {
+			player_name = "Player4";
+			//punch_button = "joystick 4 button 0";
+		}
+
 	}
 	
 	// Update is called once per frame
@@ -21,18 +42,21 @@ public class SideArms : MonoBehaviour {
 
     public void ArmDirection() //When called it validates the side the arms should be on and swaps the sides
     {
-        bool getDir = store.FacingLeft;
-        print(getDir);
-        if (getDir == true)
-        {
-            LeftArm.transform.localPosition = new Vector3(-leftArmTran.localPosition.x, leftArmTran.localPosition.y, leftArmTran.localPosition.z);
-            RightArm.transform.localPosition = new Vector3(-rightArmTran.localPosition.x, rightArmTran.localPosition.y, rightArmTran.localPosition.z);
-        }
-        else if (getDir == false)
-        {
-            LeftArm.transform.localPosition = new Vector3(-leftArmTran.localPosition.x, leftArmTran.localPosition.y, leftArmTran.localPosition.z);
-            RightArm.transform.localPosition = new Vector3(-rightArmTran.localPosition.x, rightArmTran.localPosition.y, rightArmTran.localPosition.z);
-        }
+       // print(getDir);
+		if (this.gameObject.tag == player_name) {
+			bool getDir = store.FacingLeft;
+			if (getDir == true)
+			{
+				this.LeftArm.transform.localPosition = new Vector3(-leftArmTran.localPosition.x, leftArmTran.localPosition.y, leftArmTran.localPosition.z);
+				this.RightArm.transform.localPosition = new Vector3(-rightArmTran.localPosition.x, rightArmTran.localPosition.y, rightArmTran.localPosition.z);
+			}
+			else if (getDir == false)
+			{
+				this.LeftArm.transform.localPosition = new Vector3(-leftArmTran.localPosition.x, leftArmTran.localPosition.y, leftArmTran.localPosition.z);
+				this.RightArm.transform.localPosition = new Vector3(-rightArmTran.localPosition.x, rightArmTran.localPosition.y, rightArmTran.localPosition.z);
+			}		
+		}
+
     }
 
 }
