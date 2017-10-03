@@ -41,19 +41,19 @@ public class Punch : MonoBehaviour {
 
 		if (gameObject.tag == "Player1") {
 			player_name = "Player1";
-			punch_button = "joystick 1 button 0";
+			punch_button = "joystick 1 button 2";
 		}
 		if (gameObject.tag == "Player2") {
 			player_name = "Player2";
-			punch_button = "joystick 2 button 0";
+			punch_button = "joystick 2 button 2";
 		}
 		if (gameObject.tag == "Player3") {
 			player_name = "Player3";
-			punch_button = "joystick 3 button 0";
+			punch_button = "joystick 3 button 2";
 		}
 		if (gameObject.tag == "Player4") {
 			player_name = "Player4";
-			punch_button = "joystick 4 button 0";
+			punch_button = "joystick 4 button 2";
 		}
 
     }
