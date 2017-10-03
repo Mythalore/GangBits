@@ -703,7 +703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1927de4cb74e9724c84a818dfd1148d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerManagerObject: {fileID: 0}
+  playerManagerObject: {fileID: 457134449}
   playerManager: {fileID: 0}
 --- !u!1 &395814789
 GameObject:
@@ -804,6 +804,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -179.92801}
+--- !u!1001 &457134448
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4772621074007464, guid: bf76a0713d1e8aa4aa67082ef21562c9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772621074007464, guid: bf76a0713d1e8aa4aa67082ef21562c9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772621074007464, guid: bf76a0713d1e8aa4aa67082ef21562c9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772621074007464, guid: bf76a0713d1e8aa4aa67082ef21562c9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772621074007464, guid: bf76a0713d1e8aa4aa67082ef21562c9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772621074007464, guid: bf76a0713d1e8aa4aa67082ef21562c9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772621074007464, guid: bf76a0713d1e8aa4aa67082ef21562c9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772621074007464, guid: bf76a0713d1e8aa4aa67082ef21562c9, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: bf76a0713d1e8aa4aa67082ef21562c9, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &457134449 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1141689226228032, guid: bf76a0713d1e8aa4aa67082ef21562c9,
+    type: 2}
+  m_PrefabInternal: {fileID: 457134448}
 --- !u!1 &672051645
 GameObject:
   m_ObjectHideFlags: 0
