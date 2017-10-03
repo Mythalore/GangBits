@@ -117,19 +117,19 @@ public class PlayerManagement : MonoBehaviour {
             if (player2)
             {
                 Instantiate(player2Object);
-                player2Object.transform.position = new Vector3(-4.5f, -1.0f, 0.0f);
+                player2Object.transform.position = new Vector3(1.5f, 2.0f, 0.0f);
             }
 
             if (player3)
             {
                 Instantiate(player3Object);
-                player3Object.transform.position = new Vector3(-7.0f, -1.0f, 0.0f);
+                player3Object.transform.position = new Vector3(2.5f, 2.0f, 0.0f);
             }
 
             if (player4)
             {
                 Instantiate(player4Object);
-                player4Object.transform.position = new Vector3(3.0f, -1.0f, 0.0f);
+                player4Object.transform.position = new Vector3(-0.5f, 2.0f, 0.0f);
             }
        // }
     }

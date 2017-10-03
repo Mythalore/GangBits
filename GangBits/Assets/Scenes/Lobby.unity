@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0efaea65fe05ed4c86a45a8e7bf0bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerManagerObject: {fileID: 0}
+  playerManagerObject: {fileID: 1930306783}
   playerManager: {fileID: 0}
 --- !u!23 &38073330
 MeshRenderer:
@@ -2780,7 +2780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0efaea65fe05ed4c86a45a8e7bf0bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerManagerObject: {fileID: 0}
+  playerManagerObject: {fileID: 1930306783}
   playerManager: {fileID: 0}
 --- !u!23 &1441742957
 MeshRenderer:
@@ -3629,7 +3629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0efaea65fe05ed4c86a45a8e7bf0bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerManagerObject: {fileID: 0}
+  playerManagerObject: {fileID: 1930306783}
   playerManager: {fileID: 0}
 --- !u!23 &1738210867
 MeshRenderer:
