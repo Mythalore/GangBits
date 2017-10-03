@@ -11,10 +11,10 @@ public class PlayerManagement : MonoBehaviour {
     public bool player2 = false;
    public  bool player3 = false;
     public bool player4 = false;
-    int player1Lives = 3;
-    int player2Lives = 3;
-    int player3Lives = 3;
-    int player4Lives = 3;
+    public int player1Lives = 3;
+    public int player2Lives = 3;
+    public int player3Lives = 3;
+    public int player4Lives = 3;
     public int playerCount = 0;
 
     public GameObject player1Object;
@@ -31,13 +31,16 @@ public class PlayerManagement : MonoBehaviour {
 	void Update () {
 
         Scene scene = SceneManager.GetActiveScene();
+        Debug.Log(scene);
         if (scene.name == "Lobby")
         {
+
             if(Input.GetButton("P1Confirm"))
             {
                 if (player1 == false)
                 {
                     player1 = true;
+                    Debug.Log(player1);
                     playerCount++;
                 }
                 
@@ -49,6 +52,7 @@ public class PlayerManagement : MonoBehaviour {
                 {
                     playerCount--;
                     player1 = false;
+                    
                     Debug.Log("PLayer 1 cancelled");
                 }
                 
@@ -62,6 +66,7 @@ public class PlayerManagement : MonoBehaviour {
                 if (!player2)
                 {
                     player2 = true;
+                    
                     playerCount++;
                 }
             }
@@ -127,14 +132,17 @@ public class PlayerManagement : MonoBehaviour {
        {
             DontDestroyOnLoad(this.gameObject);
             Instance = this;
-            Debug.Log(player1);
+            //Debug.Log(player1);
         }
        else if (Instance != this)
         {
             Destroy(gameObject);
         }
 
-        
+        Debug.Log(player1);
+        Debug.Log(player2);
+        Debug.Log(player3);
+        Debug.Log(player4);
     }
 
     void OnEnable()
@@ -149,45 +157,45 @@ public class PlayerManagement : MonoBehaviour {
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        //Scene scene1 = SceneManager.GetActiveScene();
-       // if (scene.name != "Lobby")
-        //{
+        Scene scene1 = SceneManager.GetActiveScene();
+        if (scene.name != "Lobby")
+        {
             Debug.Log(player1);
             if (player1)
             {
-            if (player1Lives != 0)
-            {
+           // if (player1Lives != 0)
+           // {
                 Instantiate(player1Object);
-                player1Object.transform.position = new Vector3(0.5f, 2.0f, 0.0f);
-            }
+                player1Object.transform.position = new Vector3(-5f, 2.0f, 0.0f);
+           // }
             }
 
             if (player2)
             {
-            if (player2Lives != 0)
-            {
+          //  if (player2Lives != 0)
+        //    {
                 Instantiate(player2Object);
-                player2Object.transform.position = new Vector3(1.5f, 2.0f, 0.0f);
-            }
+                player2Object.transform.position = new Vector3(0f, 2.0f, 0.0f);
+         //   }
             }
 
             if (player3)
             {
-                if (player3Lives != 0)
-                {
+         //       if (player3Lives != 0)
+         //       {
                     Instantiate(player3Object);
-                    player3Object.transform.position = new Vector3(2.5f, 2.0f, 0.0f);
-                }
+                    player3Object.transform.position = new Vector3(5f, 2.0f, 0.0f);
+         //       }
             }
 
             if (player4)
             {
-                    if (player4Lives != 0)
-                    {
+         //           if (player4Lives != 0)
+          //          {
                         Instantiate(player4Object);
-                        player4Object.transform.position = new Vector3(-0.5f, 2.0f, 0.0f);
-                    }
+                        player4Object.transform.position = new Vector3(10f, 2.0f, 0.0f);
+         //           }
             }
-       // }
+        }
     }
 }

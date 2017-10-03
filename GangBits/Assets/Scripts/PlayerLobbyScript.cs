@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerLobbyScript : MonoBehaviour {
 
@@ -11,7 +12,7 @@ public class PlayerLobbyScript : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        //playerManagerObject = GameObject.Find("PlayerManager");
+        playerManagerObject = GameObject.FindGameObjectWithTag("PlayerManager");
         playerManager = playerManagerObject.GetComponent<PlayerManagement>();
         
 	}
@@ -26,44 +27,44 @@ public class PlayerLobbyScript : MonoBehaviour {
         {
             if (playerManager.player1 == true)
             {
-               gameObject.GetComponent<Renderer>().material.color = Color.green;
+                gameObject.GetComponent<Image>().color = Color.white;
             }
-            else
+            else if (playerManager.player1 == false)
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.red;
+                gameObject.GetComponent<Image>().color = Color.grey;
             }
         }
-        else if(this.gameObject.tag == "Player2")
-        {
+       else if(this.gameObject.tag == "Player2")
+       {
             if (playerManager.player2 == true)
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.green;
+                gameObject.GetComponent<Image>().color = Color.white;
             }
-            else
+            else if (playerManager.player2 == false)
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.red;
+                gameObject.GetComponent<Image>().color = Color.grey;
             }
         }
-        else if (this.gameObject.tag == "Player3")
-        {
+       else if (this.gameObject.tag == "Player3")
+       {
             if (playerManager.player3 == true)
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.green;
+                gameObject.GetComponent<Image>().color = Color.white;
             }
-            else
+            else if (playerManager.player3 == false)
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.red;
+                gameObject.GetComponent<Image>().color = Color.grey;
             }
         }
-        else if (this.gameObject.tag == "Player4")
+      else if (this.gameObject.tag == "Player4")
         {
             if (playerManager.player4 == true)
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.green;
+                gameObject.GetComponent<Image>().color = Color.white;
             }
-            else
+            else if (playerManager.player4 == false)
             {
-                gameObject.GetComponent<Renderer>().material.color = Color.red;
+                gameObject.GetComponent<Image>().color = Color.grey;
             }
         }
 		
