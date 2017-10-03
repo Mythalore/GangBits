@@ -127,7 +127,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 2
+  m_Constraints: 0
 --- !u!61 &61290614480543652
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -219,7 +219,7 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0}
   jump_height: 1
   gravity: 50
-  jump_force: 50
+  jump_force: 60
   impulse_force: {x: 0, y: 0}
 --- !u!114 &114232287620784474
 MonoBehaviour:

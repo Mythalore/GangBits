@@ -40,8 +40,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (this.gameObject.tag == "Player1")
         {
-
-            moveDirection.x = (Input.GetAxis("Horizontal1"));
+   //         moveDirection.x = (Input.GetAxis("Horizontal1"));
+			//if(moveDirection.x < 0.1 && moveDirection.x > -0.1 )
+   //         {
+   //             moveDirection.x = 0;
+   //         }
             impulse_force = Vector2.ClampMagnitude((speed * moveDirection * rig.mass), max_force);
 
             if (grounded)
@@ -63,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
             rig.AddForce(impulse_force, ForceMode2D.Impulse);
             moveDirection = Vector2.zero;
         }
+
         //PLAYER 2
         else if (this.gameObject.tag == "Player2")
         {
@@ -89,6 +93,7 @@ public class PlayerMovement : MonoBehaviour
             rig.AddForce(impulse_force, ForceMode2D.Impulse);
             moveDirection = Vector2.zero;
         }
+
         //PLAYER 3
         else if (this.gameObject.tag == "Player3")
         {
@@ -114,7 +119,9 @@ public class PlayerMovement : MonoBehaviour
 
             rig.AddForce(impulse_force, ForceMode2D.Impulse);
             moveDirection = Vector2.zero;
+			impulse_force = Vector2.zero;
         }
+
         //PLAYER 4
         else if (this.gameObject.tag == "Player4")
         {
@@ -141,8 +148,6 @@ public class PlayerMovement : MonoBehaviour
             rig.AddForce(impulse_force, ForceMode2D.Impulse);
             moveDirection = Vector2.zero;
         }
-        //add force as impulse to the rigidbody
-        // rig.AddForce(impulse_force, ForceMode2D.Impulse);
     }
 
 
@@ -151,8 +156,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (col.gameObject.tag == "Ground")
         {
-            Debug.Log("Entered");
-
             grounded = true;
         }
 
@@ -163,9 +166,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if (col.gameObject.tag == "Ground")
         {
-            Debug.Log("Departed");
-
             grounded = false;
+        }
+    }
+
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.tag == "Ground")
+        {
+            transform.parent = col.gameObject.transform;
+            Debug.Log("Parented");
         }
     }
 
