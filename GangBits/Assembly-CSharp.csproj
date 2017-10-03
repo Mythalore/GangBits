@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\PlayerManagement.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Punch.cs" />
+     <Compile Include="Assets\Scripts\ScoreUI.cs" />
      <Compile Include="Assets\Scripts\SideArms.cs" />
      <Compile Include="Assets\Scripts\TrainLevel.cs" />
      <Compile Include="Assets\Scripts\WallRepel.cs" />

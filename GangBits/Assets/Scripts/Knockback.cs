@@ -63,22 +63,26 @@ public class Knockback : MonoBehaviour {
         {
             Debug.Log(self_name + "hit P1");
             col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector , ForceMode2D.Impulse);
+			playPunchSound ();
         }
         if (col.gameObject.tag == "Player2" && col.gameObject.tag != self_name)
         {
             Debug.Log(self_name + "hit P2");
             col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector, ForceMode2D.Impulse);
+			playPunchSound ();
 
         }
         if (col.gameObject.tag == "Player3" && col.gameObject.tag != self_name)
         {
             Debug.Log(self_name + "hit P3");
             col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector, ForceMode2D.Impulse);
+			playPunchSound ();
         }
         if (col.gameObject.tag == "Player4" && col.gameObject.tag != self_name)
         {
             Debug.Log(self_name + "hit P4");
             col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector, ForceMode2D.Impulse);
+			playPunchSound ();
         }
     }
 }
