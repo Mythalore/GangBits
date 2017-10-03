@@ -207,7 +207,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!114 &92283443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,7 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   train: {fileID: 1946094512}
-  trainTime: 20
+  trainTime: 10
   trainCount: 0
 --- !u!1 &191782243
 GameObject:
@@ -397,7 +396,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &257093858
 Transform:
   m_ObjectHideFlags: 0
@@ -510,7 +508,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!114 &259753981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,7 +620,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!114 &346567740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,7 +716,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &375640481
 Transform:
   m_ObjectHideFlags: 0
@@ -831,7 +826,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &395814792
 Transform:
   m_ObjectHideFlags: 0
@@ -1072,7 +1066,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &813689366
 Transform:
   m_ObjectHideFlags: 0
@@ -1186,7 +1179,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!114 &910323049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1284,7 +1276,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &964069430
 Transform:
   m_ObjectHideFlags: 0
@@ -1355,7 +1346,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &997432902
 Transform:
   m_ObjectHideFlags: 0
@@ -1453,7 +1443,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &1223321728
 Transform:
   m_ObjectHideFlags: 0
@@ -1540,7 +1529,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!1 &1425032392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1693,7 +1681,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &1453340806
 Transform:
   m_ObjectHideFlags: 0
@@ -1807,7 +1794,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!114 &1463143604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1920,7 +1906,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!114 &1519039693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2058,7 +2043,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &1687625269
 Transform:
   m_ObjectHideFlags: 0
@@ -2233,7 +2217,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!114 &1784979063
 MonoBehaviour:
   m_ObjectHideFlags: 0

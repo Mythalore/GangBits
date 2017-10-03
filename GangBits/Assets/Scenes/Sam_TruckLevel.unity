@@ -262,8 +262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sign: {fileID: 791394351}
   trucks: {fileID: 1946094512}
-  signTime: 45
-  truckChangeTime: 30
+  signTime: 15
+  truckChangeTime: 10
   signCount: 0
   truckChangeCount: 0
   isFrontTruck: 0
@@ -339,7 +339,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &257093858
 Transform:
   m_ObjectHideFlags: 0
@@ -452,7 +451,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &375640481
 Transform:
   m_ObjectHideFlags: 0
@@ -565,7 +563,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!61 &545121400
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -654,8 +651,8 @@ Canvas:
   m_GameObject: {fileID: 672051645}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 102780684}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
@@ -663,7 +660,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 384495433
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &672051649
@@ -754,7 +751,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!1 &723353385
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,7 +820,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!1 &791394349
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,7 +929,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &997432902
 Transform:
   m_ObjectHideFlags: 0
@@ -1017,7 +1011,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!1 &1320622226 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1448442515741290, guid: 1659d2fb2eb1c1045910a76c76d5a306,
@@ -1185,7 +1178,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!1 &1687625267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,7 +1234,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!4 &1687625269
 Transform:
   m_ObjectHideFlags: 0
@@ -1387,7 +1378,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!1 &1946094510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,7 +1702,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
 --- !u!1001 &2059606448
 Prefab:
   m_ObjectHideFlags: 0
