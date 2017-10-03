@@ -10,11 +10,9 @@ public class Knockback : MonoBehaviour {
     private Vector3 punch_vector = Vector2.zero;
     private Direction directionFunc;
     private GameObject parent;
-<<<<<<< HEAD
-=======
     private Knockout knockOutFunc;
 
->>>>>>> 1e6a9cc93957323364d6d1d6c974e338a6479ccf
+
     public float punch_force = 10.0f;
 	public AudioSource punch;
 	
@@ -68,42 +66,30 @@ public class Knockback : MonoBehaviour {
         {
             //Debug.Log(self_name + "hit P1");
             col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector , ForceMode2D.Impulse);
-<<<<<<< HEAD
 			playPunchSound ();
-=======
             knockOutFunc.Hit(col.gameObject, "Player1");
->>>>>>> 1e6a9cc93957323364d6d1d6c974e338a6479ccf
+
         }
         if (col.gameObject.tag == "Player2" && col.gameObject.tag != self_name)
         {
             //Debug.Log(self_name + "hit P2");
             col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector, ForceMode2D.Impulse);
-<<<<<<< HEAD
 			playPunchSound ();
-=======
             knockOutFunc.Hit(col.gameObject, "Player2");
->>>>>>> 1e6a9cc93957323364d6d1d6c974e338a6479ccf
-
         }
         if (col.gameObject.tag == "Player3" && col.gameObject.tag != self_name)
         {
             //Debug.Log(self_name + "hit P3");
             col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector, ForceMode2D.Impulse);
-<<<<<<< HEAD
 			playPunchSound ();
-=======
             knockOutFunc.Hit(col.gameObject, "Player3");
->>>>>>> 1e6a9cc93957323364d6d1d6c974e338a6479ccf
         }
         if (col.gameObject.tag == "Player4" && col.gameObject.tag != self_name)
         {
             //Debug.Log(self_name + "hit P4");
             col.gameObject.GetComponent<Rigidbody2D>().AddForce(punch_vector, ForceMode2D.Impulse);
-<<<<<<< HEAD
 			playPunchSound ();
-=======
             knockOutFunc.Hit(col.gameObject, "Player4");
->>>>>>> 1e6a9cc93957323364d6d1d6c974e338a6479ccf
         }
     }
 }

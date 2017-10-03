@@ -13,14 +13,11 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = 50.0f;
     public float jump_force = 50.0f;
     public Vector2 impulse_force = Vector2.zero;
-<<<<<<< HEAD
 	public AudioSource jump;
-=======
 
     private Knockout knockedOutFunc;
     private bool knockedOutRef;
 
->>>>>>> 1e6a9cc93957323364d6d1d6c974e338a6479ccf
     private bool grounded = false;
 	private string axis_string = "";
 	private string jump_string = "";
