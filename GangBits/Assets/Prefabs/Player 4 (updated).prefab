@@ -496,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53fa3f04afffab45b44be28f19cb8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  punch_force: 20
+  punch_force: 50
   punch: {fileID: 82020412185673056}
 --- !u!114 &114745661478732240
 MonoBehaviour:
@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53fa3f04afffab45b44be28f19cb8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  punch_force: 20
+  punch_force: 50
   punch: {fileID: 82020412185673056}
 --- !u!212 &212211113097182938
 SpriteRenderer:

@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53fa3f04afffab45b44be28f19cb8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  punch_force: 20
+  punch_force: 50
   punch: {fileID: 82435670098781370}
 --- !u!114 &114280638109402924
 MonoBehaviour:
@@ -470,7 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53fa3f04afffab45b44be28f19cb8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  punch_force: 20
+  punch_force: 50
   punch: {fileID: 82435670098781370}
 --- !u!114 &114620214570032102
 MonoBehaviour:
