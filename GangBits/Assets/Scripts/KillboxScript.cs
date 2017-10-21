@@ -54,9 +54,14 @@ public class KillboxScript : MonoBehaviour
             time += Time.deltaTime;
             if (time >= displayWinnerTime)
             {
+                time = 0.0f;
                 sceneChange();
             }
         }
+        print("P1:" + playerManager.player1Lives);
+        print("P2:" + playerManager.player2Lives);
+        print("P3:" + playerManager.player3Lives);
+        print("P4:" + playerManager.player4Lives);
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -68,6 +73,7 @@ public class KillboxScript : MonoBehaviour
         {
             playerManager.player1Lives--;
             playerManager.playerCount--;
+            Destroy(collider.gameObject);
             isWinnerP1 = false;
             if (playerManager.player1Lives == 0)
             {
@@ -75,10 +81,11 @@ public class KillboxScript : MonoBehaviour
                 playerCountReset--;
             }
         }
-        else if (collider.tag == "Player2")
+        if (collider.tag == "Player2")
         {
             playerManager.player2Lives--;
             playerManager.playerCount--;
+            Destroy(collider.gameObject);
             isWinnerP2 = false;
             if (playerManager.player2Lives == 0)
             {
@@ -86,10 +93,11 @@ public class KillboxScript : MonoBehaviour
                 playerCountReset--;
             }
         }
-        else if (collider.tag == "Player3")
+        if (collider.tag == "Player3")
         {
             playerManager.player3Lives--;
             playerManager.playerCount--;
+            Destroy(collider.gameObject);
             isWinnerP3 = false;
             if (playerManager.player3Lives == 0)
             {
@@ -97,10 +105,11 @@ public class KillboxScript : MonoBehaviour
                 playerCountReset--;
             }
         }
-        else if (collider.tag == "Player4")
+        if (collider.tag == "Player4")
         {
             playerManager.player4Lives--;
             playerManager.playerCount--;
+            Destroy(collider.gameObject);
             isWinnerP4 = false;
             if (playerManager.player4Lives == 0)
             {
@@ -117,10 +126,13 @@ public class KillboxScript : MonoBehaviour
 
 
 
-        Destroy(collider);
 
         if (playerCountReset == 1)
         {
+            isWinnerP1 = true;
+            isWinnerP2 = true;
+            isWinnerP3 = true;
+            isWinnerP4 = true;
             playerManager.player1 = false;
             playerManager.player2 = false;
             playerManager.player3 = false;

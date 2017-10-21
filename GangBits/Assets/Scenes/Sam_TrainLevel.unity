@@ -419,7 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManagerObject: {fileID: 457134449}
   playerManager: {fileID: 0}
-  winnerCanvas: {fileID: 0}
+  winnerCanvas: {fileID: 1776273202}
 --- !u!1 &102780680
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,7 +723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManagerObject: {fileID: 457134449}
   playerManager: {fileID: 0}
-  winnerCanvas: {fileID: 0}
+  winnerCanvas: {fileID: 1776273202}
 --- !u!1 &294664506
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,7 +936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManagerObject: {fileID: 457134449}
   playerManager: {fileID: 0}
-  winnerCanvas: {fileID: 0}
+  winnerCanvas: {fileID: 1776273202}
 --- !u!1 &375640478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1621,7 +1621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManagerObject: {fileID: 457134449}
   playerManager: {fileID: 0}
-  winnerCanvas: {fileID: 0}
+  winnerCanvas: {fileID: 1776273202}
 --- !u!1 &916199092
 GameObject:
   m_ObjectHideFlags: 0
@@ -2634,7 +2634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManagerObject: {fileID: 457134449}
   playerManager: {fileID: 0}
-  winnerCanvas: {fileID: 0}
+  winnerCanvas: {fileID: 1776273202}
 --- !u!1 &1519039689
 GameObject:
   m_ObjectHideFlags: 0
@@ -2748,7 +2748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManagerObject: {fileID: 457134449}
   playerManager: {fileID: 0}
-  winnerCanvas: {fileID: 0}
+  winnerCanvas: {fileID: 1776273202}
 --- !u!1 &1629137978
 GameObject:
   m_ObjectHideFlags: 0
@@ -3176,7 +3176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManagerObject: {fileID: 457134449}
   playerManager: {fileID: 0}
-  winnerCanvas: {fileID: 0}
+  winnerCanvas: {fileID: 1776273202}
 --- !u!1 &1946094510
 GameObject:
   m_ObjectHideFlags: 0
