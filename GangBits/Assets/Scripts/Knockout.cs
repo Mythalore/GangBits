@@ -7,28 +7,36 @@ public class Knockout : MonoBehaviour {
     public bool knockedOut = false;
     private Knockout knockOutFunc;
     private Color color;
-    private float time;
-    private float time2;
+    private float time = 0.0f;
+    private float knockedDownLength = 3f;
 	// Use this for initialization
 	void Start () {
         time = Time.time;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (knockedOut == true)
         {
-            if (Time.time >= time + 5f)
+            time += Time.deltaTime;
+            if (time >= knockedDownLength)
             { 
-                time = Time.time;
+                time = 0.0f;
                 knockoutTolerance = 10;
                 knockedOut = false;
-                
+                if (transform.rotation.z != 0)
+                {
+                    Quaternion target = Quaternion.Euler(new Vector3(0, 0, 0));
+                    transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * 100f);
+                }
             }
         }
         else if (knockoutTolerance <= 0)
         {
             knockedOut = true;
+            Quaternion target = Quaternion.Euler(new Vector3(0, 0, 90));
+            transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * 100f);
         }
 
 	}

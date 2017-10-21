@@ -5,32 +5,29 @@ using UnityEngine;
 public class TruckLevel : MonoBehaviour {
 
 	public Animator sign, trucks;
-	public float signTime, truckChangeTime;
-	public float signCount, truckChangeCount;
-	public bool isFrontTruck;
+	public float signTime, initalSignTime;
+	public float signCount;
+	public bool initialSign = true;
 
 	// Use this for initialization
 	void Start () {
-		
+		initialSign = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		signCount += Time.deltaTime;
-		if(signCount >= signTime){
-			sign.SetTrigger ("SIGN!");
-			signCount = 0;
-		}
-		truckChangeCount += Time.deltaTime;
-		if(truckChangeCount >= truckChangeTime){
-			if (isFrontTruck) {
-				trucks.SetTrigger ("FrontSwitch");
-				isFrontTruck = false;
-			} else {
-				trucks.SetTrigger ("BackSwitch");
-				isFrontTruck = true;
+		if (initialSign) {
+			if (signCount >= initalSignTime) {
+				sign.SetTrigger ("SIGN!");
+				signCount = 0;
+				initialSign = false;
 			}
-			truckChangeCount = 0;
+		} else {
+			if(signCount >= signTime){
+				sign.SetTrigger ("SIGN!");
+				signCount = 0;
+			}
 		}
 	}
 }

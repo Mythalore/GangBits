@@ -21,6 +21,10 @@ public class PlayerManagement : MonoBehaviour {
     public GameObject player2Object;
     public GameObject player3Object;
     public GameObject player4Object;
+    public GameObject player1Spawn;
+    public GameObject player2Spawn;
+    public GameObject player3Spawn;
+    public GameObject player4Spawn;
     
     // Use this for initialization
     void Start () {
@@ -168,14 +172,24 @@ public class PlayerManagement : MonoBehaviour {
         Scene scene1 = SceneManager.GetActiveScene();
         if (scene.name != "Lobby" && scene.name != "Callan")
         {
+            player1Spawn = null;
+            player2Spawn = null;
+            player3Spawn = null;
+            player4Spawn = null;
+            player1Spawn = GameObject.FindGameObjectWithTag("P1Spawn");
+            player2Spawn = GameObject.FindGameObjectWithTag("P2Spawn");
+            player3Spawn = GameObject.FindGameObjectWithTag("P3Spawn");
+            player4Spawn = GameObject.FindGameObjectWithTag("P4Spawn");
+
             Debug.Log(player1);
             if (player1)
             {
            // if (player1Lives != 0)
            // {
                 Instantiate(player1Object);
-                player1Object.transform.position = new Vector3(-5f, 2.0f, 0.0f);
-           // }
+                // player1Object.transform.position = new Vector3(-2f, 2.0f, 0.0f);
+                player1Object.transform.position = player1Spawn.transform.position;
+                // }
             }
 
             if (player2)
@@ -183,8 +197,9 @@ public class PlayerManagement : MonoBehaviour {
           //  if (player2Lives != 0)
         //    {
                 Instantiate(player2Object);
-                player2Object.transform.position = new Vector3(0f, 2.0f, 0.0f);
-         //   }
+                //player2Object.transform.position = new Vector3(0f, 2.0f, 0.0f);
+                player2Object.transform.position = player2Spawn.transform.position;
+                //   }
             }
 
             if (player3)
@@ -192,8 +207,10 @@ public class PlayerManagement : MonoBehaviour {
          //       if (player3Lives != 0)
          //       {
                     Instantiate(player3Object);
-                    player3Object.transform.position = new Vector3(5f, 2.0f, 0.0f);
-         //       }
+                //player3Object.transform.position = new Vector3(2f, 2.0f, 0.0f);
+
+                player3Object.transform.position = player3Spawn.transform.position;
+                //       }
             }
 
             if (player4)
@@ -201,8 +218,9 @@ public class PlayerManagement : MonoBehaviour {
          //           if (player4Lives != 0)
           //          {
                         Instantiate(player4Object);
-                        player4Object.transform.position = new Vector3(10f, 2.0f, 0.0f);
-         //           }
+                //player4Object.transform.position = new Vector3(4f, 2.0f, 0.0f);
+                player4Object.transform.position = player4Spawn.transform.position;
+                //           }
             }
         }
     }
