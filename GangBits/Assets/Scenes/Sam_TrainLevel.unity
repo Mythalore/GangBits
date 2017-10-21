@@ -201,8 +201,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 48416673}
   m_LocalRotation: {x: -0, y: -0, z: -0.9999998, w: 0.00062739843}
-  m_LocalPosition: {x: 8.56, y: -5.13, z: 0.0004234314}
-  m_LocalScale: {x: -3.120497, y: 0.6, z: 1.1141399}
+  m_LocalPosition: {x: 8.56, y: -4.56, z: 0.0004234314}
+  m_LocalScale: {x: -3.120497, y: 1.0186005, z: 1.1141399}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -300,8 +300,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 74278387}
   m_LocalRotation: {x: -0, y: -0, z: -0.9999998, w: 0.00062739843}
-  m_LocalPosition: {x: -8.6, y: -5.13, z: 0.0004234314}
-  m_LocalScale: {x: 3.16, y: 0.6, z: 1.1141399}
+  m_LocalPosition: {x: -8.6, y: -4.56, z: 0.0004234314}
+  m_LocalScale: {x: 3.16, y: 1.0186005, z: 1.1141399}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -817,8 +817,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 294664506}
   m_LocalRotation: {x: -0, y: -0, z: -0.9999998, w: 0.00062739843}
-  m_LocalPosition: {x: 7.95, y: -5.65, z: 0.0004234314}
-  m_LocalScale: {x: -5.885494, y: 0.6, z: 1.1141399}
+  m_LocalPosition: {x: 7.95, y: -5.44, z: 0.0004234314}
+  m_LocalScale: {x: -5.885494, y: 1.0186005, z: 1.1141399}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -1157,7 +1157,7 @@ GameObject:
   - component: {fileID: 411303321}
   m_Layer: 0
   m_Name: P3Spawn
-  m_TagString: Untagged
+  m_TagString: P3Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1715,8 +1715,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 916199092}
   m_LocalRotation: {x: -0, y: -0, z: -0.9999998, w: 0.00062739843}
-  m_LocalPosition: {x: -7.98, y: -5.65, z: 0.0004234314}
-  m_LocalScale: {x: 5.96, y: 0.6, z: 1.1141399}
+  m_LocalPosition: {x: -7.98, y: -5.44, z: 0.0004234314}
+  m_LocalScale: {x: 5.96, y: 1.0186005, z: 1.1141399}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -2336,7 +2336,7 @@ GameObject:
   - component: {fileID: 1380364906}
   m_Layer: 0
   m_Name: P2Spawn
-  m_TagString: Untagged
+  m_TagString: P2Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3284,7 +3284,7 @@ GameObject:
   - component: {fileID: 2108766199}
   m_Layer: 0
   m_Name: P4Spawn
-  m_TagString: Untagged
+  m_TagString: P4Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

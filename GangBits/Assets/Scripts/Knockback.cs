@@ -49,7 +49,7 @@ public class Knockback : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        isPunchingRef = punchFunc.isPunching;
+        isPunchingRef = punchFunc.isLeftPunching;
 	}
 
     void OnCollisionEnter2D(Collision2D col)

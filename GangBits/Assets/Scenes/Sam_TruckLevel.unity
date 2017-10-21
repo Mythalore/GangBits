@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 242734065}
   m_Layer: 0
   m_Name: P4Spawn
-  m_TagString: Untagged
+  m_TagString: P4Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1027,7 +1027,7 @@ GameObject:
   - component: {fileID: 857997544}
   m_Layer: 0
   m_Name: P2Spawn
-  m_TagString: Untagged
+  m_TagString: P2Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1934,7 +1934,7 @@ GameObject:
   - component: {fileID: 1764994762}
   m_Layer: 0
   m_Name: P3Spawn
-  m_TagString: Untagged
+  m_TagString: P3Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -11,7 +11,8 @@ public class Knockout : MonoBehaviour {
     private float knockedDownLength = 3f;
 	// Use this for initialization
 	void Start () {
-        color = gameObject.GetComponent<Renderer>().material.color;
+        time = Time.time;
+
 	}
 	
 	// Update is called once per frame
