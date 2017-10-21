@@ -7,7 +7,13 @@ public class Punch : MonoBehaviour {
     public GameObject rightHand;
     public GameObject leftHand;
 
-    public bool isPunching = false;
+    public bool isLeftPunching = false;
+	public bool isRightPunching = false;
+	public float punch_distance = 6.0f;
+	public float punch_time = 8.0f;
+	Vector2 target_pos;
+
+
 
     private Transform RightrightHandStore;
     private Transform RightleftHandStore;
@@ -25,7 +31,8 @@ public class Punch : MonoBehaviour {
     private bool knockOutRef;
 
     private string player_name = "";
-	private string punch_button = "";
+	private string punchL = "";
+	private string punchR = "";
     // Use this for initialization
     void Start () {
 
@@ -43,55 +50,118 @@ public class Punch : MonoBehaviour {
 
 		if (gameObject.tag == "Player1") {
 			player_name = "Player1";
-			punch_button = "joystick 1 button 2";
+			punchL = "P1PunchL";
+			punchR = "P1PunchR";
 		}
 		if (gameObject.tag == "Player2") {
 			player_name = "Player2";
-			punch_button = "joystick 2 button 2";
+			punchL = "P2PunchL";
+			punchR = "P2PunchR";
 		}
 		if (gameObject.tag == "Player3") {
 			player_name = "Player3";
-			punch_button = "joystick 3 button 2";
+			punchL = "P3PunchL";
+			punchR = "P3PunchR";
 		}
 		if (gameObject.tag == "Player4") {
 			player_name = "Player4";
-			punch_button = "joystick 4 button 2";
+			punchL = "P4PunchL";
+			punchR = "P4PunchR";
 		}
 
     }
 
     // Update is called once per frame
-    void Update ()
-    { //Joystick button 0 is the A button on the controller
-        knockOutRef = knockOutFunc.knockedOut;
-        if (gameObject.tag == player_name && knockOutRef == false)
-        {
-            if (Input.GetKey(punch_button) && directionFunc.FacingLeft == false) //Right Facing Punch Animation
-            {
-                isPunching = true;
-                rightHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 3.0f, 0.8f), rightHand.transform.localPosition.y, rightHand.transform.localPosition.z);
-                leftHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 2.5f, 0.8f), leftHand.transform.localPosition.y, leftHand.transform.localPosition.z);
-            }
-            else if (Input.GetKey(punch_button) && directionFunc.FacingLeft == true) //Left Facing Punch Animation
-            {
-                isPunching = true;
-                rightHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 3.0f, -0.5f), rightHand.transform.localPosition.y, rightHand.transform.localPosition.z);
-                leftHand.transform.localPosition = new Vector3(Mathf.PingPong(Time.time * 2.5f, -0.5f), leftHand.transform.localPosition.y, leftHand.transform.localPosition.z);
-            }
-            else if (Input.GetKeyUp(punch_button) && directionFunc.FacingLeft == false) //Right Facing Position reset
-            {
-                isPunching = false;
-                rightHand.transform.localPosition = rightRightHandvec;
-                leftHand.transform.localPosition = rightLeftHandvec;
-            }
-            else if (Input.GetKeyUp(punch_button) && directionFunc.FacingLeft == true) //Left Facing Position reset
-            {
-                isPunching = false;
-                rightHand.transform.localPosition = LeftRightHandvec;
-                leftHand.transform.localPosition = LeftLeftHandvec;
-            }
-        }
-    }
+    void FixedUpdate ()
+	{ //Joystick button 0 is the A button on the controller
+		knockOutRef = knockOutFunc.knockedOut;
+		if (gameObject.tag == player_name && knockOutRef == false) {
 
+			leftPunch ();
+			rightPunch ();
+
+			if (Input.GetButtonDown (punchL)) { //Right Facing Punch Animation
+				isLeftPunching = true;
+			}
+
+			if (Input.GetButtonDown (punchR)) {
+				isRightPunching = true;
+			}
+
+	
+
+			if (isLeftPunching == false) {
+				leftHand.transform.localPosition = Vector2.Lerp (leftHand.transform.localPosition, transform.localPosition, (punch_time * 1.3f) * Time.deltaTime);
+
+			}
+				
+			if (isRightPunching == false) {
+				rightHand.transform.localPosition = Vector2.Lerp (rightHand.transform.localPosition, transform.localPosition, (punch_time * 1.3f) * Time.deltaTime);
+			}
+		}
+	}
+
+	void leftPunch()
+	{
+		target_pos = new Vector2(leftHand.transform.localPosition.x + punch_distance, leftHand.transform.localPosition.y);
+
+		if (directionFunc.FacingLeft == false) {
+			target_pos = new Vector2(leftHand.transform.localPosition.x + punch_distance, leftHand.transform.localPosition.y);
+			if (target_pos.x <= 10.0f) {
+				//punch done
+				if (isLeftPunching == true) {
+					leftHand.transform.localPosition = Vector2.Lerp (leftHand.transform.localPosition, target_pos, punch_time * Time.deltaTime);
+				}
+				
+			} else {
+				isLeftPunching = false;
+			}
+		} else if (directionFunc.FacingLeft == true) { //Left Facing Punch Animation
+			target_pos = new Vector2(leftHand.transform.localPosition.x - punch_distance, leftHand.transform.localPosition.y);
+			if (target_pos.x >= -10.0f) {
+				//punch done
+				if (isLeftPunching == true) {
+					leftHand.transform.localPosition = Vector2.Lerp (leftHand.transform.localPosition, target_pos, punch_time * Time.deltaTime);
+				}
+
+			} else {
+				isLeftPunching = false;
+			}
+
+		}
+	}
+
+
+	void rightPunch ()
+	{
+		target_pos = new Vector2(rightHand.transform.localPosition.x + punch_distance, rightHand.transform.localPosition.y);
+
+		if (directionFunc.FacingLeft == false) {
+			target_pos = new Vector2(rightHand.transform.localPosition.x + punch_distance, rightHand.transform.localPosition.y);
+			if (target_pos.x <= 10.0f) {
+				//punch done
+				if (isRightPunching == true) {
+					rightHand.transform.localPosition = Vector2.Lerp (rightHand.transform.localPosition, target_pos, punch_time * Time.deltaTime);
+				}
+
+			} else {
+				isRightPunching = false;
+			}
+		} else if (directionFunc.FacingLeft == true) { //Left Facing Punch Animation
+			target_pos = new Vector2(rightHand.transform.localPosition.x - punch_distance, rightHand.transform.localPosition.y);
+			if (target_pos.x >= -10.0f) {
+				//punch done
+				if (isRightPunching == true) {
+					rightHand.transform.localPosition = Vector2.Lerp (rightHand.transform.localPosition, target_pos, punch_time * Time.deltaTime);
+				}
+
+			} else {
+				isRightPunching = false;
+			}
+
+		}
+
+
+	}
   
 }

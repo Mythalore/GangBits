@@ -12,7 +12,6 @@ public class Knockout : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         time = Time.time;
-        color = gameObject.GetComponent<Renderer>().material.color;
 	}
 	
 	// Update is called once per frame
