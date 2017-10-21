@@ -13,6 +13,8 @@ public class Punch : MonoBehaviour {
 	public float punch_time = 8.0f;
 	Vector2 target_pos;
 
+	public bool isLeftExtended = false;
+	public bool isRightExtended = false;
 
 
     private Transform RightrightHandStore;
@@ -39,14 +41,6 @@ public class Punch : MonoBehaviour {
         directionFunc = GetComponent<Direction>(); // Gets the direction the player is facing
         knockOutFunc = GetComponent<Knockout>();
         
-
-        RightrightHandStore = rightHand.transform; //Stores the inital values of the hands to move them to resetted positions
-        RightleftHandStore = leftHand.transform; // ^
-        rightLeftHandvec = new Vector3(RightleftHandStore.localPosition.x, RightleftHandStore.localPosition.y, RightleftHandStore.localPosition.z); //Location of left hand when facing right
-        rightRightHandvec = new Vector3(RightrightHandStore.localPosition.x, RightrightHandStore.localPosition.y, RightrightHandStore.localPosition.z); //Location of right hand when facing right
-
-        LeftLeftHandvec = new Vector3(-RightleftHandStore.localPosition.x, RightleftHandStore.localPosition.y, RightleftHandStore.localPosition.z); //Location of left hand when facing left
-        LeftRightHandvec = new Vector3(-RightrightHandStore.localPosition.x, RightrightHandStore.localPosition.y, RightrightHandStore.localPosition.z); //Location of right hand when facing left
 
 		if (gameObject.tag == "Player1") {
 			player_name = "Player1";
@@ -88,14 +82,33 @@ public class Punch : MonoBehaviour {
 				isRightPunching = true;
 			}
 
-	
+			if (Input.GetButton (punchL)) {
+				isLeftExtended = true;
+			} else {
+				isLeftExtended = false;
+			}
+			if (Input.GetButton (punchR)) {
+				isRightExtended = true;
+			} else {
+				isRightExtended = false;
+			}
 
-			if (isLeftPunching == false) {
+			if (Input.GetButtonUp (punchL)) {
+				isLeftExtended = false;
+			}
+
+			if (Input.GetButtonUp (punchR)) {
+				isRightExtended = false;
+			}
+			
+
+			if (isLeftPunching == false && isLeftExtended == false) {
+				
 				leftHand.transform.localPosition = Vector2.Lerp (leftHand.transform.localPosition, transform.localPosition, (punch_time * 1.3f) * Time.deltaTime);
 
 			}
 				
-			if (isRightPunching == false) {
+			if (isRightPunching == false && isRightExtended == false) {
 				rightHand.transform.localPosition = Vector2.Lerp (rightHand.transform.localPosition, transform.localPosition, (punch_time * 1.3f) * Time.deltaTime);
 			}
 		}

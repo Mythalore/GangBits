@@ -12,6 +12,8 @@ public class Knockback : MonoBehaviour {
     private GameObject parent;
     private Knockout knockOutFunc;
 
+	public GameObject shoulder;
+
     private Punch punchFunc;
     private bool isPunchingRef;
     public float punch_force = 10.0f;
