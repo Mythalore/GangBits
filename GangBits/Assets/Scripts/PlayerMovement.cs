@@ -124,10 +124,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if(col.gameObject.tag == "Ground")
         {
-            transform.parent = col.gameObject.transform;
-           // Debug.Log("Parented");
+           transform.parent = col.gameObject.transform;
         }
-    }
+	}
+
+	void OnTriggerExit2D(Collider2D col)
+	{
+		if(col.gameObject.tag == "Ground")
+		{
+			transform.parent = null;
+		}
+	}
 
     //Not working, but could be?
     //public bool isGrounded()
