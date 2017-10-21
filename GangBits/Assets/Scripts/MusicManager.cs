@@ -21,7 +21,7 @@ public class MusicManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (speaker.isPlaying);
+
 		if(Input.GetKeyDown(KeyCode.M)){
 			switch(mode){
 			case MusicMode.FULL:
