@@ -15,6 +15,10 @@ TagManager:
   - Fists2
   - Fists3
   - Fists4
+  - P1Spawn
+  - P2Spawn
+  - P3Spawn
+  - P4Spawn
   layers:
   - Default
   - TransparentFX
