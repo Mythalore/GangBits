@@ -79,7 +79,7 @@ public class Knockback : MonoBehaviour {
         }
         if (col.gameObject.tag == "Player2" && col.gameObject.tag != self_name)
         {
-            print(isPunchingRef);
+            //print(isPunchingRef);
             if (isPunchingRef == true)
             {
                 //Debug.Log(self_name + "hit P2");
@@ -90,7 +90,7 @@ public class Knockback : MonoBehaviour {
         }
         if (col.gameObject.tag == "Player3" && col.gameObject.tag != self_name)
         {
-            print(isPunchingRef);
+            //print(isPunchingRef);
             if (isPunchingRef == true)
             {
                 //Debug.Log(self_name + "hit P3");
@@ -101,7 +101,7 @@ public class Knockback : MonoBehaviour {
         }
         if (col.gameObject.tag == "Player4" && col.gameObject.tag != self_name)
         {
-            print(isPunchingRef);
+            //print(isPunchingRef);
             if (isPunchingRef == true)
             {
                 //Debug.Log(self_name + "hit P4");

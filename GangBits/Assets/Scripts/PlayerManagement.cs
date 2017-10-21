@@ -48,7 +48,7 @@ public class PlayerManagement : MonoBehaviour {
                 if (player1 == false)
                 {
                     player1 = true;
-                    Debug.Log(player1);
+                    //Debug.Log(player1);
                     playerCount++;
                 }
                 
@@ -61,7 +61,7 @@ public class PlayerManagement : MonoBehaviour {
                     playerCount--;
                     player1 = false;
                     
-                    Debug.Log("PLayer 1 cancelled");
+                    //Debug.Log("PLayer 1 cancelled");
                 }
                 
                 
@@ -181,7 +181,7 @@ public class PlayerManagement : MonoBehaviour {
             player3Spawn = GameObject.FindGameObjectWithTag("P3Spawn");
             player4Spawn = GameObject.FindGameObjectWithTag("P4Spawn");
 
-            Debug.Log(player1);
+            //Debug.Log(player1);
             if (player1)
             {
            // if (player1Lives != 0)
