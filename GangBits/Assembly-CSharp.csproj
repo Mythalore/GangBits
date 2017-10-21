@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\KillboxScript.cs" />
      <Compile Include="Assets\Scripts\Knockback.cs" />
      <Compile Include="Assets\Scripts\Knockout.cs" />
+     <Compile Include="Assets\Scripts\MusicManager.cs" />
      <Compile Include="Assets\Scripts\PlayerLobbyScript.cs" />
      <Compile Include="Assets\Scripts\PlayerManagement.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
@@ -61,6 +62,7 @@
      <Compile Include="Assets\Scripts\SideArms.cs" />
      <Compile Include="Assets\Scripts\TrainLevel.cs" />
      <Compile Include="Assets\Scripts\WallRepel.cs" />
+     <Compile Include="Assets\WinnerDisplay.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

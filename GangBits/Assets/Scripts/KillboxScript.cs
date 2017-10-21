@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class KillboxScript : MonoBehaviour
 {
 
@@ -16,6 +16,7 @@ public class KillboxScript : MonoBehaviour
     private bool isWinnerP2 = false;
     private bool isWinnerP3 = false;
     private bool isWinnerP4 = false;
+    public Canvas winnerCanvas;
     // Use this for initialization
     void Start()
     {
@@ -134,7 +135,7 @@ public class KillboxScript : MonoBehaviour
     }
     void printWinner(int winningPlayer)
     {
-        print("the winner is player" + winningPlayer);
+        winnerCanvas.GetComponentInChildren<Text>().text = winningPlayer + "Is the Winner!";
     }
     int findWinner()
     {

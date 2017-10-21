@@ -192,6 +192,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &48416676
 Transform:
   m_ObjectHideFlags: 0
@@ -290,6 +291,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &74278390
 Transform:
   m_ObjectHideFlags: 0
@@ -403,6 +405,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!114 &92283443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -416,6 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManagerObject: {fileID: 457134449}
   playerManager: {fileID: 0}
+  winnerCanvas: {fileID: 0}
 --- !u!1 &102780680
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,6 +596,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &257093858
 Transform:
   m_ObjectHideFlags: 0
@@ -704,6 +709,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!114 &259753981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,6 +723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManagerObject: {fileID: 457134449}
   playerManager: {fileID: 0}
+  winnerCanvas: {fileID: 0}
 --- !u!1 &294664506
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,6 +808,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &294664509
 Transform:
   m_ObjectHideFlags: 0
@@ -914,6 +922,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!114 &346567740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -927,6 +936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManagerObject: {fileID: 457134449}
   playerManager: {fileID: 0}
+  winnerCanvas: {fileID: 0}
 --- !u!1 &375640478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,6 +1020,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &375640481
 Transform:
   m_ObjectHideFlags: 0
@@ -1036,6 +1047,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManagerObject: {fileID: 457134449}
   playerManager: {fileID: 0}
+  winnerCanvas: {fileID: 1776273202}
 --- !u!1 &395814789
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,6 +1132,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &395814792
 Transform:
   m_ObjectHideFlags: 0
@@ -1480,6 +1493,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &813689366
 Transform:
   m_ObjectHideFlags: 0
@@ -1593,6 +1607,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!114 &910323049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1606,6 +1621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManagerObject: {fileID: 457134449}
   playerManager: {fileID: 0}
+  winnerCanvas: {fileID: 0}
 --- !u!1 &916199092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,6 +1706,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &916199095
 Transform:
   m_ObjectHideFlags: 0
@@ -1788,6 +1805,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &964069430
 Transform:
   m_ObjectHideFlags: 0
@@ -1858,6 +1876,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &997432902
 Transform:
   m_ObjectHideFlags: 0
@@ -2043,6 +2062,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &1223321728
 Transform:
   m_ObjectHideFlags: 0
@@ -2129,6 +2149,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!1 &1315701725
 GameObject:
   m_ObjectHideFlags: 0
@@ -2485,6 +2506,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &1453340806
 Transform:
   m_ObjectHideFlags: 0
@@ -2598,6 +2620,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!114 &1463143604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2611,6 +2634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManagerObject: {fileID: 457134449}
   playerManager: {fileID: 0}
+  winnerCanvas: {fileID: 0}
 --- !u!1 &1519039689
 GameObject:
   m_ObjectHideFlags: 0
@@ -2710,6 +2734,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!114 &1519039693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2723,6 +2748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManagerObject: {fileID: 457134449}
   playerManager: {fileID: 0}
+  winnerCanvas: {fileID: 0}
 --- !u!1 &1629137978
 GameObject:
   m_ObjectHideFlags: 0
@@ -2847,6 +2873,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!4 &1687625269
 Transform:
   m_ObjectHideFlags: 0
@@ -2922,6 +2949,120 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1776273201
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224826385873953968, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224826385873953968, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224826385873953968, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224826385873953968, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224826385873953968, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224826385873953968, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224826385873953968, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224826385873953968, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 224826385873953968, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224826385873953968, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224826385873953968, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224826385873953968, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224826385873953968, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224826385873953968, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224826385873953968, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224826385873953968, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224826385873953968, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224826385873953968, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884979726082426, guid: 6512a62bf772a964b9dbf911d38af0e8, type: 2}
+      propertyPath: m_Name
+      value: Canvas (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 223917672364182414, guid: 6512a62bf772a964b9dbf911d38af0e8,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 102780684}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6512a62bf772a964b9dbf911d38af0e8, type: 2}
+  m_IsPrefabParent: 0
+--- !u!223 &1776273202 stripped
+Canvas:
+  m_PrefabParentObject: {fileID: 223917672364182414, guid: 6512a62bf772a964b9dbf911d38af0e8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1776273201}
 --- !u!1 &1784979059
 GameObject:
   m_ObjectHideFlags: 0
@@ -3021,6 +3162,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!114 &1784979063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3034,6 +3176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManagerObject: {fileID: 457134449}
   playerManager: {fileID: 0}
+  winnerCanvas: {fileID: 0}
 --- !u!1 &1946094510
 GameObject:
   m_ObjectHideFlags: 0
