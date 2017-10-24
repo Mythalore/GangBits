@@ -173,13 +173,17 @@ public class KillboxScript : MonoBehaviour
     void sceneChange()
     {
         Scene scene = SceneManager.GetActiveScene();
-        if (scene.name == "Sam_TruckLevel")
+        switch (scene.name)
         {
-            SceneManager.LoadScene(3);
-        }
-        else if (scene.name == "Sam_TrainLevel")
-        {
-            SceneManager.LoadScene(2);
+            case "Sam_TruckLevel":
+                SceneManager.LoadScene(3);
+                break;
+            case "Sam_TrainLevel":
+                SceneManager.LoadScene(4);
+                break;
+            case "Sam_WheelLevel":
+                SceneManager.LoadScene(2);
+                break;
         }
         playerManager.playerCount = playerCountReset;
     }

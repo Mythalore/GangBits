@@ -142,7 +142,7 @@ MonoBehaviour:
   player3Lives: 3
   player4Lives: 3
   playerCount: 0
-  player1Object: {fileID: 1376108830902002, guid: 50f09a2f8bee4f148acd1716b945ad18,
+  player1Object: {fileID: 1092071030365306, guid: f9c19a692ff469b4083575abfe190c0f,
     type: 2}
   player2Object: {fileID: 1092071030365306, guid: 438fdd54594b67d4b80a3eb5ef30a64b,
     type: 2}
@@ -150,6 +150,10 @@ MonoBehaviour:
     type: 2}
   player4Object: {fileID: 1931130676147004, guid: 32014703221c87c4bbeae918e5a3096f,
     type: 2}
+  player1Spawn: {fileID: 0}
+  player2Spawn: {fileID: 0}
+  player3Spawn: {fileID: 0}
+  player4Spawn: {fileID: 0}
 --- !u!114 &114736572029469640
 MonoBehaviour:
   m_ObjectHideFlags: 1
