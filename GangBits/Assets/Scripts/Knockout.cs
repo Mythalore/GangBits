@@ -8,7 +8,7 @@ public class Knockout : MonoBehaviour {
     private Knockout knockOutFunc;
     private Color color;
     private float time = 0.0f;
-    private float knockedDownLength = 3f;
+    private float knockedDownLength = 5f;
 	// Use this for initialization
 	void Start () {
         time = Time.time;
